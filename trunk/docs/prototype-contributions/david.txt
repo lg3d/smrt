@@ -1,0 +1,21 @@
+My contributions to the prototype cover almost the entire code-base.  I began
+by doing most of the work to start up looking glass in "stand alone" mode.
+After this, I fleshed out the main components of our architecture, starting
+with the ring menu as a test-bed.  In the context of this work, I developed
+an architecture for loading menus from XML files, enabling menus to be
+configured entirely through the data files (see files in data/menus).
+
+After this, I did the work necessary to support X11 integration, known in the
+lg3d code-base as "native window integration."  This involved instantiating
+some class collaborations within lg3d, implementing a "WindowLookAndFeel"
+class to display applications as we desired, as well as assembling the various
+libraries and applications used by the "fake" X server.  This also involved
+creating a way to associate players with certain file types, which can be
+seen in data/applications.conf.  After this work, I spent almost a week
+researching and implementing performance tweaks in order to get the video
+frame-rate up to an acceptable level.
+
+Near the end of the prototyping, I helped Cory with some parts of the
+cityscape menu -- most notably, implementing text wrapping and filename
+filtering (a way to turn filenames like 412_where_no_fan_has_gone_before.avi"
+into "412 Where No Fan Has Gone Before").

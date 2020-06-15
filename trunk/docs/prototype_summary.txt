@@ -1,0 +1,51 @@
+For our prototype we identified three major phases of development to guide the
+process.  First, implement a state manager and ring menu to get the most basic
+functionality required for our design.  Second, implement the remaining menus
+-- the arc and city scape menus -- within the framework created in the first
+phase to provide enough detail to evaluate the interface.  Finally, implemen
+extra features such as X11 integration for movie playback, XMLTV support, etc.
+We completed the first two phases, and are about halfway through the third
+phase at this point.
+
+During the first phase a number of empty files were created to help outline the
+overall structure of the program.  It was decided that menus would be stored as
+XML files so that we could make use of XMLBeans to load the menus.  David
+created a menu loader to accomplish this. The ring menu itself was implemented
+in two classes: a RingMenu class that was instantiated by the menu loader, and
+a RingLayout class that positioned menu items along the ring and managed the
+menu selection.  In addition to the ring menu a state manager was created to
+handle interaction between menus.
+
+At this time we had to address issues with Looking Glass such as lighting and
+text rendering.  We required a way to light certain objects fully so that they
+would be visible, but light others only partially to make their dimensions more
+clear.  Looking Glass does not provide a means for disabling lights on branches
+of the scene graph, so we had to create a branch in the scene graph for fully
+lit objects and for unlit objects.  Also, in the stable release of Looking
+Glass, there is no widget for rendering text. In the process of creating one,
+Evan discovered a text widget in Looking Glass CVS. We updated our
+lg3d-core.jar file to one built from CVS so that we would have access to the
+text widget.
+
+In the second phase of development Cory began work on the city scape menu and
+Daniel began work on the arc menu.  Like the ring menu, these were implemented
+with two classes: a *Menu class and a *Layout class. In addition to the
+CityscapeMenu class, Cory created a FilesystemCity class for browsing local
+files.
+
+At this time David and Evan began work on the remaining features specified for
+phase three.  David got X11 integration configured and working and then created
+an application manager.  The application manager is responsible for starting
+external applications used for media playback such as Xine or MPlayer.  Support
+for both of the players was implemented in the prototype.  Evan began
+integrating XMLTV support for accessing TV channel and program information. He
+created an XML parser for reading in the XMLTV data and subclassed the ArcMenu
+class to display the data extracted from XMLTV. The ArcMenu can correctly
+display TV channels, but the parser does not fully parse the XMLTV data yet.
+Only some of the channel information is being displayed at this time.
+
+Right now we have all three menu types implemented and functioning in the
+prototype.  Preliminary support for external media players is working.
+Integration with XMLTV for TV watching is nearly complete.  Most importantly,
+the basic infrastructure we devised in our system architecture is implemented,
+and we know for sure that it is sufficient for our requirements.

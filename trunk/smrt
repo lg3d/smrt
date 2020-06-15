@@ -1,0 +1,75 @@
+#!/bin/bash
+
+CONFIGDIR="`pwd`/data/"
+DISP_CONFIG="file://${CONFIGDIR}java3d.conf"
+LGCONFIG="file://${CONFIGDIR}lg3d.conf"
+CLASSPATH="classes:lib/lg3d-core.jar:lib/j3d-contrib-utils.jar:lib/escher-0.2.2.lg.jar:${CLASSPATH}"
+__GL_FSAA_MODE=2
+__GL_NO_DSO_FINALIZER=1
+RMI_PORT=44817
+LG_DISPLAY=:1
+MACHINE="`uname -m`"
+if [ "$MACHINE" == "x86_64" ]; then
+	LGX11HOME=lg3d-x11/amd64
+	LD_LIBRARY_PATH="lib:lib/amd64"
+else
+	LGX11HOME=lg3d-x11/x86
+	LD_LIBRARY_PATH="lib:lib/x86"
+fi
+XVFB_ARGS="$LG_DISPLAY -screen 0 320x240x24 +extension Composite +extension LGE -noreset -ac"
+
+export LD_LIBRARY_PATH CLASSPATH __GL_FSAA_MODE
+
+# Start the X server
+pkill Xvfb
+sleep 2
+XAUTHORITY="" DISPLAY=$LG_DISPLAY $LGX11HOME/programs/Xserver/Xvfb $XVFB_ARGS &
+sleep 2
+DISPLAY=$LG_DISPLAY xhost +
+xhost +
+
+# Start the RMI registry, whatever that is
+pkill -f "rmiregistry $RMI_PORT"
+sleep 1
+rmiregistry $RMI_PORT &
+
+# Start the display server
+# All these special JVM arguments are for tuning performance.  Without these,
+# video playback is pretty slow
+
+if test "x$USE_PROFILER" = "xyes"; then
+	# Bug fix for Ubuntu systems.  Apparently this needs to be loaded in order for
+	# hardware acceleration to work...
+	LD_PRELOAD=/usr/lib/libGLU.so.1 java \
+		-cp $CLASSPATH \
+		\
+		-Xms384m -Xmx384m \
+		\
+		-Dj3d.sortShape3DBounds="true" \
+		-Dlg.etcdir=$CONFIGDIR \
+		-Dlg.configurl=$LGCONFIG \
+		-Dlg.fws.x11.interfaceRequired=0.1 \
+		-Dlg.lgserverdisplay=$LG_DISPLAY \
+		-Dlg.displayconfigurl=$DISP_CONFIG \
+		-Dlg.fws.mode=app \
+		-Dlg.maxfps=0 \
+		\
+		-Xrunjmp \
+		org.jdesktop.lg3d.apps.smrt.MediaCenter
+else
+	LD_PRELOAD=/usr/lib/libGLU.so.1 java \
+		-cp $CLASSPATH \
+		\
+		-Xms384m -Xmx384m \
+		\
+		-Dj3d.sortShape3DBounds="true" \
+		-Dlg.etcdir=$CONFIGDIR \
+		-Dlg.configurl=$LGCONFIG \
+		-Dlg.fws.x11.interfaceRequired=0.1 \
+		-Dlg.lgserverdisplay=$LG_DISPLAY \
+		-Dlg.displayconfigurl=$DISP_CONFIG \
+		-Dlg.fws.mode=app \
+		-Dlg.maxfps=0 \
+		\
+		org.jdesktop.lg3d.apps.smrt.MediaCenter
+fi

@@ -1,0 +1,267 @@
+\documentclass[style=smrt,mode=present,paper=screen]{powerdot}
+% \documentclass[style=smrt,mode=handout,paper=letterpaper]{powerdot}
+
+\usepackage{setspace}
+\usepackage{listings}
+
+\lstnewenvironment{code}{%
+        \lstset{basicstyle=\tiny\ttfamily}
+}{}
+
+%\onehalfspacing
+
+\title{\huge{\textbf{smrt Final Demonstration}} \\ \small{A 3D Media Center}}
+\author {
+	Cory Maccarrone
+	\and
+	Daniel Seikaly
+	\and
+	Evan Sheehan
+	\and
+	David Trowbridge
+}
+\date{May 2, 2006}
+\begin{document}
+\maketitle
+
+\presenter{Daniel Seikaly}
+
+% Overview slide.  Sort of a table of contents.
+\begin{slide}[toc=,bm=]{Presentation Overview}
+{\footnotesize \tableofcontents[content=all]}
+\end{slide}
+
+%\doublespacing
+
+% About the class
+\section[slide=false]{The Class}
+\begin{slide}{Senior Project Class}
+\begin{itemize}
+\item Year-long course
+\item Required for all computer science sutdents at CU
+\item Taught by Bruce Sanders
+\item Offered every year since its inception in 1987
+\item Since then 1140 students have finished 273 projects
+\item \textit{smrt} is one of 15 projects involving 68 students
+\item Other projects vary from card games to 3D image conversion tools
+\item Its purpose is to give students ``real world'' experience
+\end{itemize}
+\end{slide}
+
+% The Problem
+\section[slide=false]{The Problem}
+\begin{slide}[toc=,bm=]{Problem: Representation}
+\begin{itemize}
+\item Current media center software designed in 2D \\
+\item Can we benefit from a third dimension? \\
+\begin{itemize}
+	\item More efficient representation of data? \\
+	\item More intuitive user interface? \\
+	\item Eye candy
+\end{itemize}
+\end{itemize}
+\end{slide}
+
+% The "Solution"
+\section[slide=false]{The Solution}
+\begin{slide}[toc=,bm=]{The Solution: smrt}
+\begin{itemize}
+\item Media center application based on Sun's Looking Glass 3D
+\begin{itemize}
+	\item Framework for 3D interfaces
+	\item Input device events
+	\item Embedding external programs into the 3D environment
+\end{itemize}
+\item Provides TiVO-like functionality in a 3D environment
+\item Capabilities for navigating through vast libraries of media
+\begin{itemize}
+	\item Categories
+	\item Filesystem navigation
+\end{itemize}
+\item Watch live TV, and play DVDs and music
+\end{itemize}
+\end{slide}
+
+\presenter{Cory Maccarrone}
+
+% Conceptual Diagram
+\begin{slide}{Conceptual Diagram}
+\begin{figure}[htb]
+	\includegraphics[width=4in]{../lib/figures/conceptual_overview}
+\end{figure}
+\end{slide}
+
+% Environmental Requirements
+\begin{slide}{Environmental Requirements}
+\begin{itemize}
+\item Software Environment
+\begin{itemize}
+	\item Sun Java Development Kit version 5.0
+	\item Latest version of Looking Glass 3D (currently 0.7.1)
+\end{itemize}
+\item Hardware Environment
+\begin{itemize}
+	\item Demonstrable on hardware supporting TV/HDTV output
+	\item Input from remote control or keyboard
+	\item Extensible to new and esoteric input devices
+\end{itemize}
+\end{itemize}
+\end{slide}
+
+% Functional Requirements
+\begin{slide}{Functional Requirements}
+\begin{itemize}
+\item Display at multiple screen resolutions (NTSC and HDTV)
+\item Provide mechanisms for displaying all available media
+\begin{itemize}
+	\item Local media (mp3s, etc.)
+	\item DVDs, audio CDs
+	\item Live TV (with schedules)
+\end{itemize}
+\item Interface must utilize the third dimension
+\end{itemize}
+\end{slide}
+
+\presenter{David Trowbridge}
+
+% Screenshots
+\begin{slide}{Interface}
+\begin{figure}[htb]
+	\includegraphics[angle=-90,width=4in]{figures/interface}
+\end{figure}
+\end{slide}
+
+% Demo
+\begin{slide}{Demonstration}
+\end{slide}
+
+\presenter{Evan Sheehan}
+
+% Architecture
+\begin{slide}{Architecture}
+\begin{itemize}
+\item MediaCenter creates the StateController and ApplicationManager
+\item StateController tracks the state with Context stack
+\item ApplicationManager oversees external applications
+\end{itemize}
+\begin{figure}
+	\includegraphics[angle=-90,width=4in]{figures/MediaCenter-uml}
+\end{figure}
+\end{slide}
+
+\begin{slide}{Context}
+\begin{itemize}
+\item Context is the interface used to pass on events from the StateController
+\item The context can be a menu or an application
+\end{itemize}
+\begin{figure}[htb]
+	\includegraphics[angle=-90,width=4in]{figures/Context-uml}
+\end{figure}
+\end{slide}
+
+\begin{slide}{Menus}
+\begin{figure}[htb]
+	\includegraphics[angle=-90,width=4in]{figures/Menu-uml}
+\end{figure}
+\end{slide}
+
+\begin{slide}{Applications}
+\begin{figure}[htb]
+	\includegraphics[angle=-90,width=4in]{../lib/figures/ApplicationFactory-uml}
+\end{figure}
+\end{slide}
+
+\begin{slide}{Menu files}
+\begin{itemize}
+        \item Menus are referenced by filename -- loading ``main'' will use ``main.menu''
+	\item Uses Java's XML serialization
+	\item File contains one Menu object and any number of Item objects
+	\item Specialized menu types (such as FilesystemCity) can have special
+	      configuration without upsetting other subsystems
+\end{itemize}
+\end{slide}
+
+\begin{slide}[method=direct]{Example .menu}
+\begin{code}
+<java version="1.5.0" class="java.beans.XMLDecoder">
+  <object class="org.jdesktop.lg3d.apps.smrt.menu.RingMenu"/>
+  <object class="org.jdesktop.lg3d.apps.smrt.menu.IconItem">
+    <void property="iconFilename">   <string>tv.png</string>   </void>
+    <void property="label">          <string>Watch TV</string> </void>
+    <void property="action">         <string>push</string>     </void>
+    <void property="actionArgument"> <string>tv</string>       </void>
+  </object>
+  <object class="org.jdesktop.lg3d.apps.smrt.menu.IconItem">
+    <void property="iconFilename">   <string>music.png</string> </void>
+    <void property="label">
+        <string>Listen to Music</string>
+    </void>
+    <void property="action">         <string>push</string>      </void>
+    <void property="actionArgument"> <string>music</string>     </void>
+  </object>
+</java>
+\end{code}
+\end{slide}
+
+
+\begin{slide}{Applications Configuration}
+\begin{itemize}
+        \item Want to leverage any existing player applications
+	\item Different players for different media types -- no existing player can do everything
+	\item \textit{applications.conf} associates regular expressions with ApplicationFactory objects
+	\item Regular expression is matched against the argument given to \textbf{launch} actions
+\end{itemize}
+\end{slide}
+
+\begin{slide}[method=direct]{applications.conf}
+\begin{code}
+<java version="1.5.0" class="java.beans.XMLDecoder">
+  <object class="org.jdesktop.lg3d.apps.smrt.application.XineFactory">
+    <void property="regexs">
+      <array class="java.lang.String">
+        <string>.*\.avi</string>
+        <string>.*\.mpeg</string>
+        <string>dvd\://.*</string>
+      </array>
+    </void>
+  </object>
+  <object class="org.jdesktop.lg3d.apps.smrt.application.MPlayerFactory">
+    <void property="regexs">
+      <array class="java.lang.String">
+        <string>tv\://p{Digit}*</string>
+      </array>
+    </void>
+  </object>
+</java>
+\end{code}
+\end{slide}
+
+\presenter{Daniel Seikaly}
+
+% Summary of Major Points
+\section[slide=false]{Summary}
+\begin{slide}[toc=,bm=]{Summary}
+\begin{itemize}
+\item The Problem: Media Center in 3D
+\item The Solution: smrt \\
+\begin{itemize}
+	\item Requirements
+	\item User Interface and Demonstration
+	\item Architecture
+\end{itemize}
+\end{itemize}
+\end{slide}
+
+\presenter{}
+\section[slide=false]{Questions}
+\begin{slide}[toc=,bm=]{Thanks!}
+Thank you!
+\end{slide}
+
+\begin{slide}[toc=,bm=]{Questions}
+\begin{figure}[htb]
+	\includegraphics[width=3in]{../lib/figures/fishstick}
+\end{figure}
+\end{slide}
+
+\end{document}

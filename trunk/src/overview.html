@@ -1,0 +1,46 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+</head>
+<body bgcolor="white">
+
+<h2>Project overview</h2>
+
+<p>smrt is a media center application written using the Project Looking Glass
+framework.  The goal of this project is to create a user interface for a home
+media center along the lines of TiVo, but using 3D user interface elements
+within the Looking Glass environment.</p>
+
+<div align="center">
+<img src="doc-files/conceptual-overview.png" height="166" width="400" alt="Conceptual overview diagram" />
+</div>
+
+<p>This is a conceptual diagram of the overall system. This diagram shows how
+smrt interacts with its software and hardware environment. At the most basic
+level, smrt allows a user to browse through and play media, as well as watch
+or record a TV show. To control the system, a simple input device such as
+keyboard or remote control is used.</p>
+
+<h2>Design overview</h2>
+
+<p>smrt's code can be divided coarsely into four modules: the state controller,
+the application manager, menus, and applications. The
+{@link org.jdesktop.lg3d.apps.smrt.StateController StateController}
+tracks internal state changes. The
+{@link org.jdesktop.lg3d.apps.smrt.application.ApplicationManager ApplicationManager}
+handles interaction with external applications such as media players.  The
+state controller and the application manager are created by the
+{@link org.jdesktop.lg3d.apps.smrt.MediaCenter MediaCenter} class when smrt is
+started. The menu package implements all of smrt's menu types.  In addition, it
+contains some specialized subclasses of these menu types for implementing
+specific behavior, such as a cityscape which browses the filesystem. The
+application package represents external applications internally for the state
+controller.</p>
+
+<div align="center">
+<img src="doc-files/modules-uml.png" height="264" width="550" alt="UML diagram showing major modules" />
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,14 @@
+During the prototyping stage of this project, I have contributed a large
+amount of code to the project.  I have completed a preliminary (but fully
+functional) city-scape style menu interface that includes full navigation
+(using the arrow keys), the ability to traverse directories (both go in and
+come back out), and also to select movies for playing.
+
+Zooming effects are in place for all of the navigation, and I have also
+implemented a feature that places sub-buildings on top of the main buildings
+that correspond to the directory contents.
+
+Preliminary support is in place for loading items and sub-items in the
+background during rendering, but testing has shown it to be quite unstable,
+producing occasional crashes and unpredictable behavior.  As such, this
+functionality is disabled, loading everything at once in the foreground.

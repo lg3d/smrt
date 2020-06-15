@@ -1,0 +1,321 @@
+\documentclass[letterpaper, titlepage, 11pt]{article}
+\usepackage{fullpage}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{titling}
+
+% This is here so we can have a fancier title page than LaTeX gives us by default
+\newcommand{\department}[1]{%
+  \gdef\dept{#1}}
+\newcommand{\dept}{}
+\renewcommand{\maketitlehookd}{%
+\par\noindent \dept }
+
+\title{
+	smrt: A 3D Media Center User Interface
+	\\
+	Requirements
+}
+\author{
+	Cory Maccarrone  \\ {\small \href{mailto:Cory.Maccarrone@colorado.edu}{Cory.Maccarrone@colorado.edu}}
+	\and
+	Daniel Seikaly   \\ {\small \href{mailto:Daniel.Seikaly@colorado.edu}{Daniel.Seikaly@colorado.edu}}
+	\and
+	Evan Sheehan     \\ {\small \href{mailto:Wallace.Sheehan@gmail.com}{Wallace.Sheehan@gmail.com}}
+	\and
+	David Trowbridge \\ {\small \href{mailto:trowbrds@gmail.com}{trowbrds@gmail.com}}
+}
+\date{November 2, 2005}
+\department{
+\begin{center}
+	CSCI 4308-4318. Software Engineering Project 1 \& 2 \\
+	Department of Computer Science \\
+	University of Colorado at Boulder \\
+	2005-2006 \\
+	\vspace{1.5em}
+	Sun Microsystems \\
+	Santa Clara, CA \\
+	\vspace{1em}
+	Paul Byrne \\
+	{\small \href{mailto:Paul.Byrne@Sun.COM}{Paul.Byrne@Sun.COM}} \\
+	\vspace{1em}
+	Hideya Kawahara \\
+	{\small \href{mailto:Hideya.Kawahara@Sun.COM}{Hideya.Kawahara@Sun.COM}}
+\end{center}
+}
+
+\begin{document}
+\maketitle
+
+\raggedbottom
+
+\pagenumbering{roman}
+
+\hspace{1em}
+\pagebreak
+
+\tableofcontents
+\listoffigures
+\pagebreak
+
+\hspace{1em}
+\pagebreak
+
+\pagenumbering{arabic}
+
+\include{project-proposal}
+\input{introduction-common}
+Details regarding the requirements of \textit{smrt} are presented in the next
+section, including some alternative requirements for the project. Following the
+project's requirements is a section outlining some features that are not
+strictly required, but should be mentioned as possibilities for future
+development. A glossary of terms and a list of related documents can be found at
+the end of this document.
+
+\section{Requirements}
+\label{sec:requirements}
+This section describes the requirements for the \textit{smrt} software package.
+Because these requirements are fairly extensive and cover a variety of different
+aspects of the system, the discussion has been divided into several logical
+sections.  These sections discuss the development and runtime environments,
+hardware and functional requirements, as well as a specification for
+documentation and release.
+
+\pagebreak
+
+\subsection{Supporting Environment}
+The Supporting Environment includes both the hardware and software environments
+in which \textit{smrt} must function. These specifications include requirements
+for the development environment as well as the runtime environment.
+
+\subsubsection{Software}
+\textit{smrt} is a sub-project of Sun's Project Looking Glass, which means that
+\textit{smrt} needs to run with the latest stable build of the Looking Glass
+environment -- currently this is version 0.7.1. Compatibility with Looking Glass
+also requires that \textit{smrt} be written in Java and run under the Sun JDK
+(Java Development Kit) version 5.0 or higher.
+
+% To run, \textit{smrt} requires OpenGL for 3D acceleration. The X Window System
+% is required for video playback because \textit{smrt} makes use of the X11
+% integration provided by Project Looking Glass.
+
+\subsubsection{Hardware}
+Because \textit{smrt} is a media center application that is intended for use
+with televisions, it must be demonstrable on hardware supporting TV/HDTV video
+output. In order to function, \textit{smrt} must accept user input. As a media
+center application this would realistically be a remote control; however, for
+the purpose of this project all that is required is keyboard input. The type of
+input from the keyboard should be analogous to the type of input one would
+expect from a remote -- i.e. four directional buttons, an enter button, and an
+escape button.
+
+\subsection{Functional Requirements}
+The Functional Requirements encompass all of the functionality that
+\textit{smrt} is required to provide. It specifies display capabilities, user
+interface breadth, user interaction, and scalability.
+
+\subsubsection{Display}
+The graphical user interface must scale to multiple video resolutions so that it is
+viewable on different televisions or monitors. At the low end of the scale, it
+must support standard NTSC televisions. At the high end, it must support at
+least 720p\footnote{An HDTV signal which display using progressive scanning at
+720 lines of resolution. Actual pixel resolution varies by television, but is
+typically 1280x720.}.
+
+\subsubsection{Minimum User Interface Breadth}
+As a media center user interface, \textit{smrt} needs to provide mechanisms for
+the user to access all the media that they have available. It should allow
+the user to browse and select locally stored media for playback. In addition to
+locally stored files, \textit{smrt} should provide access to removable media
+such as DVDs and audio CDs. The user should also be able to select a TV channel
+to watch, and schedule TV programs for recording.
+
+In order to browse media, \textit{smrt} needs an interface for accessing local
+files on the machine. When the user selects a media file whose type is supported
+by \textit{smrt}, \textit{smrt} should load that file in the appropriate media
+player. When playback has completed \textit{smrt} should return to the screen
+the user saw before selecting the media file. To reduce the amount of
+information on the screen, \textit{smrt} will need to be able to filter the
+displayed files by type.
+
+\textit{smrt} should be able to obtain up to date program information for the TV
+channels that the user has access to. It should display this information and
+allow the user to select programs or channels to watch. In addition to viewing
+programs and channels, the user should be able to mark certain programs for
+recording. Scheduling a recording can be handled in one of two ways: the user
+can select a program by name for recording, or specify a channel, start time,
+and duration for the recording.
+
+\subsubsection{User Interaction and Scalability}
+One of the aims of Project Looking Glass is to experiment and innovate in
+the realm of user interfaces.  To this end, \textit{smrt} must use 3D user
+interface elements to accelerate the user's interaction with the system.
+
+Because \textit{smrt} can be used to access media stored locally, it needs to
+scale gracefully to large media collections. For the purposes of traceability,
+``large'' will be defined as a music collection with at least 300 albums and
+over 2,000 individual songs, or over 200 movies. For browsing collections this size
+\textit{smrt} needs to minimize user interaction. It should take noticeably
+fewer keyboard or remote-control actions than a standard 2D user interface for
+the task.
+
+\subsection {Deliverables}
+There are several deliverables which will be presented to the sponsors at the
+end of this project.  These include several documents, relating to both
+development and usage, as well as the source code to the software.
+
+\subsubsection{Documentation}
+Several documents will be produced, including:
+\begin{itemize}
+\item Requirements specification
+\item Design specification
+\item Installation and use instructions: this document will explain how to
+      install, configure and use \textit{smrt}.  It will enumerate the
+      software dependencies and explain their installation process.  In
+      addition, it will explain the file format for creating menus.
+\item UI design decisions document: this document will be an explanation of
+      the user interfaces in \textit{smrt} and the reasons that certain choices
+      were made.  It will explain how the various 3D user interface elements
+      work, both in terms of user interaction and code architecture.
+\item Developer documentation via Javadoc
+\end{itemize}
+
+\subsubsection{Release}
+All documentation and source code will be released through a java.net
+sub-project.  Written documentation will be released either as PDF or
+HTML as appropriate.
+
+\subsection{Alternative Requirements}
+Initially, we were going to require that \textit{smrt} be written in Python. It
+was our intent to use Freevo (an existing open source home theater application)
+as a backend to provide \textit{smrt}'s functionality. Because Freevo is written
+in Python, \textit{smrt} would also need to be written in Python. However, since
+\textit{smrt} needs to use Looking Glass, it cannot be written in Python.
+
+While discussing input devices, we considered a variety of different types of
+remote controls. We considered remotes that have arrow keys, joy sticks, and
+even accelerometers. Ultimately our sponsor told that we are not required to
+support remote controls, a keyboard is all that they require.
+
+\section{Future Enhancements}
+\label{sec:enhancements}
+The above requirements outline a minimum level of functionality and performance
+for \textit{smrt}; they are not, however, exhaustive. Below are some features
+that may not be implemented in the course of this project, but should be taken
+into consideration regardless.
+
+\subsection{Media Management}
+In addition to allowing the user to browse the locally stored media,
+\textit{smrt} might also provide mechanisms for managing the media, i.e. allow
+the user to delete, move, rename, fetch meta-data, etc. All of these tasks can
+be accomplished using other tools readily available to the user, but would be
+more convenient if accessible from \textit{smrt}.
+
+\subsection{Searching}
+The ability to search media with a ``live search'' would improve \textit{smrt}'s
+browsing capabilities. It should allow the user to search by artist, actor,
+year, etc. To achieve this, \textit{smrt} will need a means of searching through
+meta-data where available and fallback to file names when it isn't.
+
+\subsection{Resolving Scheduling Conflicts}
+When a user schedules a TV program for recording, \textit{smrt} should be able
+to detect if this recording conflicts with a previously scheduled recording. Due
+to the nature of the recording functionality, only one program may be recorded
+at a time. So if there is a conflict, the user needs to be informed and asked to
+resolve it.
+
+\subsection{Remote Controls}
+Normally a user will be using a remote control, not a keyboard, to interact with
+their media center. \textit{smrt} should support remote controls as input
+devices. At a minimum, the remote will need four directional buttons, an enter
+button, and an escape button. In addition to this basic remote, \textit{smrt}
+will need to be expandable to more elaborate types of remotes, such as remotes
+with joysticks or even accelerometers.
+
+\section{Summary}
+As a sub-project of Project Looking Glass, \textit{smrt}'s goal is to explore
+the possibilities of a 3D user interface when applied to a home media center.
+The project is less focused on creating a working media center then it is on
+innovating the realm of 3D user interfaces and set top boxes. It is the hope of
+the project sponsors that some useful interaction and design concepts will come
+from this project.
+
+In this paper we have enumerated the requirements for this project. Section
+\ref{sec:requirements} explains all of the developmental and functional
+requirements for \textit{smrt}, as well as identifying the documents that will
+accompany this project. At the end of section \ref{sec:requirements}, we briefly
+discuss alternate requirements that we considered early on in the life of the
+project and subsequently rejected. Section \ref{sec:requirements} explains only
+the minimum of what this project requires, as a result there are features not
+identified here that should still be considered for this project. These extra
+features are discussed in section \ref{sec:enhancements}. Once the minimum
+requirements have been met, these features will continue to guide
+\textit{smrt}'s development. As a whole, this document should provide enough
+information to develop a design for \textit{smrt} and evaluate the
+implementation of that design.
+
+\pagebreak
+\appendix
+\section{Glossary}
+A list of terms and acronyms used in this document, along with their
+definitions, is provided below.
+
+\begin{tabular}{p{.3\linewidth}p{.6\linewidth}}
+	\textbf{API}			& Application Programming Interface	\\
+	\textbf{CD}			& Compact Disc				\\
+	\textbf{DVD}			& Three letters referring to a type of
+					  optical disc storage. (In 1999 the DVD
+					  Forum decreed that DVD is not an
+					  acronym for anything.)		\\
+	\textbf{HDTV}			& High Definition TeleVision		\\
+	\textbf{HTML}			& HyperText Markup Language		\\
+	\textbf{Java}			& The Java programming language		\\
+	\textbf{JDK}			& The Java Development Kit		\\
+	\textbf{MythTV}			& An open source application for
+					  running a home theater system on a
+					  computer.				\\
+	\textbf{NTSC}			& National TeleVision System Committee.
+					  The group responsible for setting
+					  TeleVision and video standards.	\\
+	\textbf{PDF}			& Portable Document Format		\\
+	\textbf{Project Looking Glass}	& Sun Microsystems' experimental 3D
+					  desktop environment framework		\\
+	\textbf{smrt}			& The Czech word for ``death''. Also
+					  the name of this project: a rocking
+					  3D home theater interface.		\\
+	\textbf{TV}			& TeleVision				\\
+	\textbf{TiVo}			& A commercial digital video recorder.	\\
+	\textbf{XML}			& Extensible Markup Language		\\
+\end{tabular}
+
+\section{Related Documents}
+\begin{list}{}{
+\setlength{\parsep}{1ex}
+\setlength{\leftmargin}{0.5in}
+\setlength{\itemindent}{-0.5in}
+}
+
+\item[] \textbf{[Gosling 05]}
+
+	Gosling, James, Bill Joy, Guy Steele, and Gilad Bracha. \textit{The Java
+	Language Reference: Third Edition}. Addison-Wesley, Santa Clara, California, 2005.
+
+	The third edition of the Java language specification.
+
+\item[] \textbf{[Bray 04]}
+
+	Bray, Tim, John Cowan, Eve Maler, et al. \textit{Extensible Markup
+	Language (XML) 1.1}. W3C, 2004.
+
+	The World Wide Web Consortium's most recent recommendation regarding the
+	XML specification.
+
+\item[] \textbf{[Project Looking Glass]}
+
+	http://lg3d-core.dev.java.net/
+
+	The open source web site for Sun's Project Looking Glass.
+\end{list}
+
+\end{document}

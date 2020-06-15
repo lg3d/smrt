@@ -1,0 +1,182 @@
+\documentclass[letterpaper, titlepage, 11pt]{article}
+\usepackage{fullpage}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{titling}
+
+% This is here so we can have a fancier title page than LaTeX gives us by default
+\newcommand{\department}[1]{%
+  \gdef\dept{#1}}
+\newcommand{\dept}{}
+\renewcommand{\maketitlehookd}{%
+\par\noindent \dept }
+
+\title{
+	smrt: A 3D Media Center User Interface
+	\\
+	Initial Requirements
+}
+\author{
+	Cory Maccarrone  \\ {\small \href{mailto:Cory.Maccarrone@colorado.edu}{Cory.Maccarrone@colorado.edu}}
+\and
+	Daniel Seikaly   \\ {\small \href{mailto:Daniel.Seikaly@colorado.edu}{Daniel.Seikaly@colorado.edu}}
+\and
+	Evan Sheehan     \\ {\small \href{mailto:Wallace.Sheehan@gmail.com}{Wallace.Sheehan@gmail.com}}
+\and
+	David Trowbridge \\ {\small \href{mailto:trowbrds@gmail.com}{trowbrds@gmail.com}}
+}
+\date{September 21, 2005}
+\department{
+\begin{center}
+	CSCI 4308-4318. Software Engineering Project 1 \& 2 \\
+	Department of Computer Science \\
+	University of Colorado at Boulder \\
+	2005-2006 \\
+	\vspace{1.5em}
+	Sun Microsystems \\
+	Santa Clara, CA \\
+	\vspace{1em}
+	Paul Byrne \\
+	{\small \href{mailto:Paul.Byrne@Sun.COM}{Paul.Byrne@Sun.COM}} \\
+	\vspace{1em}
+	Hideya Kawahara \\
+	{\small \href{mailto:Hideya.Kawahara@Sun.COM}{Hideya.Kawahara@Sun.COM}}
+\end{center}
+}
+
+\begin{document}
+\maketitle
+
+\raggedbottom
+
+\pagenumbering{roman}
+
+\hspace{1em}
+\pagebreak
+
+\tableofcontents
+\listoffigures
+\pagebreak
+
+\hspace{1em}
+\pagebreak
+
+
+\pagenumbering{arabic}
+
+\include{project-proposal}
+\input{introduction-common}
+This document presents a preliminary list of requirements which will be used to develop
+a high-level design for \textit{smrt}.  Once the design is created, it will be used in the
+development of the prototype.  These requirements do not necessarily represent requirements
+traceable through project completion.  A more complete document will be assembled at a later
+time.
+
+\section{Requirements}
+Requirements for \textit{smrt} encompass development environment, hardware,
+functional, documentation, and release specifications. Some of these
+specifications were given directly by the sponsors; the rest were derived from
+other requirements.
+
+\pagebreak
+
+\subsection{Supporting Environment}
+The Supporting Environment includes both the hardware and software environments
+within which \textit{smrt} must work. These requirements pertain to both the
+environment in which \textit{smrt} is developed and the environment in which it
+runs.
+
+\subsubsection{Software}
+\begin{itemize}
+\item Runs within the latest stable build of the Project Looking Glass environment (currently 0.7.0).
+\item Software is written using Java, running under the Sun JDK version 5.0 or higher.
+\end{itemize}
+
+\subsubsection{Hardware}
+\begin{itemize}
+\item Must be demonstrable on hardware supporting TV/HDTV video output.
+\item Support for input devices. Minimally, it must work with a remote control
+      that has 4 directional buttons, an enter button and an escape button (or
+      unused button which can be used as escape).
+\item Extensible to esoteric and future input devices, such as remote controls
+      with analog joysticks.  The only input devices which must be inherently
+      supported are a basic remote control or a keyboard.
+\item Utilize permanent storage, such as a hard drive or FLASH memory for video
+      storage.
+\end{itemize}
+
+\subsection{Functional Requirements}
+Functional Requirements specify all of the functionality that \textit{smrt} is required
+to provide.  This includes display capabilities, user interaction, scalability, and
+user interface breadth.
+
+\subsubsection{Display}
+\begin{itemize}
+\item The software must be able to output at multiple video resolutions. At the low
+      end of the scale, it must support standard NTSC televisions.  At the high end,
+      it must support at least 720p \footnote{An HDTV signal type which displays using
+      progressive scanning at 720 lines of resolution.  Actual pixel resolution varies
+      by television, but is typically 1280x720.}.
+\end{itemize}
+
+\subsubsection{User Interaction and Scalability}
+\begin{itemize}
+\item The system must make use of 3D user interface elements in order to accelerate the
+      interaction with the system.
+\item The system must scale to large media collections.  For the purposes of traceability,
+      ``large'' will be defined as a music collection with at least 300 albums and over
+      two thousand individual songs or over 200 movies.
+\item The system must minimize user interaction to browse large media
+	collections.  It must require noticeably fewer keyboard or
+	remote-control actions than the normal 2D user interface of the chosen
+	media center back-end (or, if no preexisting back-end is used, fewer
+	actions than other media centers such as freevo or MythTV).
+\end{itemize}
+
+\subsubsection{Minimum User Interface Breadth}
+These are the user interface requirements.  Note that this only reflects the user interface;
+the actual functionality may or may not work -- e.g., the system will allow you to schedule a
+recording, but the program may not actually be recorded, depending on whether time to implement
+such a back-end is available.
+\begin{itemize}
+\item The system must allow the user to browse and select media to play.
+\item The system must allow the user to select a TV channel to watch.
+\item The system must allow the user to schedule a TV program to record.
+\end{itemize}
+
+\subsubsection{Other User Interface Possibilities}
+These are additional features we could potentially add to the UI if time allows, but are
+not part of the minimum requirements for the software.
+\begin{itemize}
+\item Management of media -- allowing the user to delete, move, rename, fetch meta-data, etc.
+\item Browsing through media via ``live search'' - search by artist, actor, year, etc.
+\item Resolving conflicts between scheduled recordings.
+\end{itemize}
+
+\subsection{Documentation and Release}
+\begin{itemize}
+\item Written documentation will be supplied in PDF format.
+\item All documentation and source code will be released through a java.net sub-project.
+\end{itemize}
+
+\begin{flushleft}
+The following documentation artifacts will be produced:
+\end{flushleft}
+
+\begin{itemize}
+\item Requirements document
+\item System architecture document
+\item UI design decisions document
+\item Installation and use instructions
+\item Developer documentation via Javadoc
+\end{itemize}
+
+\section{Summary}
+As a sub-project of Project Looking Glass, \textit{smrt}'s goal is to explore the
+possibilities of a 3D user interface when applied to a home media center. The project
+is less focused on creating a working media center then it is on innovating the realm
+of 3D user interfaces and set top boxes. It is the hope of the project sponsors that
+some useful interaction and design concepts will come from this project.
+
+\end{document}

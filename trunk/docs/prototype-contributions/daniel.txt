@@ -1,0 +1,5 @@
+For the prototyping stage of this project my main focus was the arc menu.  I
+developed the interface for the arc menu that sub-classed our existing menu
+interface.  The arc menu itself lays out a series of icons in a specified
+locations.  The menu has support for user interaction, with the ability to
+navigate by either single items or entire pages.

@@ -1,0 +1,28 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+</head>
+<body bgcolor="white">
+
+The base smrt classes and utilities.
+
+<h2>Package Specification</h2>
+
+<p>The smrt package contains the pieces of the architecture which are
+implemented in self-contained classes, as well as a few basic utility classes.
+</p>
+
+<p>The {@link org.jdesktop.lg3d.apps.smrt.MediaCenter MediaCenter} class is the
+main class initiated by the launch script.  It sets up the Looking Glass,
+then creates the <code>StateController</code> and
+<code>ApplicationManager</code>
+instances.  Finally, it pushes the menu described in data/menus/main.menu onto
+the <code>StateController</code>'s Context stack and hands control flow over to
+Looking Glass.</p>
+
+<div align="center">
+<img src="doc-files/media-center-uml.png" width="550" height="234" alt="The MediaCenter class creates the StateController and ApplicationManager."/>
+</div>
+
+</body>
+</html>

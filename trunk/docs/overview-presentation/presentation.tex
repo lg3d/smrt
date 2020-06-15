@@ -1,0 +1,192 @@
+\documentclass[style=smrt,mode=present,paper=screen]{powerdot}
+% \documentclass[style=smrt,mode=handout,paper=letterpaper]{powerdot}
+
+\usepackage{setspace}
+
+%\onehalfspacing
+
+\title{\huge{\textbf{smrt Overview}} \\ \small{A 3D Media Center}}
+\author {
+	Cory Maccarrone
+	\and
+	Daniel Seikaly
+	\and
+	Evan Sheehan
+	\and
+	David Trowbridge
+}
+\date{November 15, 2005}
+\begin{document}
+\maketitle
+
+\presenter{Daniel Seikaly}
+
+% Overview slide.  Sort of a table of contents.
+\begin{slide}[toc=,bm=]{Presentation Overview}
+\tableofcontents[content=all]
+\end{slide}
+
+%\doublespacing
+
+% Sponsor information
+\section[slide=false]{Sponsors}
+\begin{slide}{Sun Microsystems, Inc.}
+\begin{itemize}
+\item Sun Microsystems \\
+\begin{itemize}
+	\item Founded in 1982 with 4 employees \\
+	\item In 2005: 31,000 employees, \$11.1 billion in revenues \\
+\end{itemize}
+\item Project Looking Glass \\
+\begin{itemize}
+	\item ``What if your desktop were actually a 3D environment?'' \\
+	\item Exploring 3D user interfaces \\
+	\item Open source \\
+\end{itemize}
+\end{itemize}
+\end{slide}
+
+% The Problem
+\section[slide=false]{The Problem}
+\begin{slide}[toc=,bm=]{Problem: Representation}
+\begin{itemize}
+\item Current media center software designed in 2D \\
+\item Can we benefit from a third dimension? \\
+\begin{itemize}
+	\item More efficient representation of data? \\
+	\item More intuitive user interface? \\
+	\item Eye candy
+\end{itemize}
+\end{itemize}
+\end{slide}
+
+\presenter{Cory Maccarrone}
+
+% The "Solution"
+\section[slide=false]{The Solution}
+\begin{slide}[toc=,bm=]{The Solution: smrt}
+\begin{itemize}
+\item Media center application based on Sun's Looking Glass 3D
+\begin{itemize}
+	\item Framework for 3D interfaces
+	\item Input device events
+	\item Embedding external programs into the 3D environment
+\end{itemize}
+\item Provides TiVO-like functionality in a 3D environment
+\item Capabilities for navigating through vast libraries of media
+\begin{itemize}
+	\item Categories
+	\item Filesystem navigation
+\end{itemize}
+\item Play and record live TV, and play DVDs and music
+\end{itemize}
+\end{slide}
+
+% Conceptual Diagram
+\begin{slide}{Conceptual Diagram}
+\begin{figure}[htb]
+	\includegraphics[width=4in]{../lib/figures/conceptual_overview}
+\end{figure}
+\end{slide}
+
+% Environmental Requirements
+\begin{slide}{Environmental Requirements}
+\begin{itemize}
+\item Software Environment
+\begin{itemize}
+	\item Sun Java Development Kit version 5.0
+	\item Latest version of Looking Glass 3D (currently 0.7.1)
+\end{itemize}
+\item Hardware Environment
+\begin{itemize}
+	\item Demonstrable on hardware supporting TV/HDTV output
+	\item Input from remote control or keyboard
+	\item Extensible to new and esoteric input devices
+\end{itemize}
+\end{itemize}
+\end{slide}
+
+% Functional Requirements
+\begin{slide}{Functional Requirements}
+\begin{itemize}
+\item Display at multiple screen resolutions (NTSC and HDTV)
+\item Provide mechanisms for displaying all available media
+\begin{itemize}
+	\item Local media (mp3s, etc.)
+	\item DVDs, audio CDs
+	\item Live TV
+\end{itemize}
+\item Provide recording of live TV
+\item Interface must utilize the third dimension
+\end{itemize}
+\end{slide}
+
+\presenter{Evan Sheehan}
+
+% Screenshots
+\begin{slide}{smrt's Interface}
+\begin{figure}[htb]
+	\includegraphics[angle=-90,width=4in]{figures/interface}
+\end{figure}
+\end{slide}
+
+% Architecture
+\begin{slide}{Architecture}
+\begin{itemize}
+\item MediaCenter creates the StateController and ApplicationManager
+\item StateController tracks the state with Context stack
+\item ApplicationManager oversees external applications
+\end{itemize}
+\begin{figure}
+	\includegraphics[angle=-90,width=4in]{figures/MediaCenter-uml}
+\end{figure}
+\end{slide}
+
+\begin{slide}{Context}
+\begin{itemize}
+\item Context is the interface used to pass on events from the StateController
+\item The context can be a menu or an application
+\end{itemize}
+\begin{figure}[htb]
+	\includegraphics[angle=-90,width=4in]{figures/Context-uml}
+\end{figure}
+\end{slide}
+
+\begin{slide}{Menu Architecture}
+\begin{figure}[htb]
+	\includegraphics[angle=-90,width=4in]{figures/Menu-uml}
+\end{figure}
+\end{slide}
+
+\presenter{David Trowbridge}
+
+\begin{slide}{Prototype}
+\end{slide}
+
+\presenter{Daniel Seikaly}
+
+% Summary of Major Points
+\section[slide=false]{Summary}
+\begin{slide}[toc=,bm=]{Summary}
+\begin{itemize}
+\item Sun Microsystems \& Project Looking Glass
+\item The Problem: Media Center in 3D
+\item The Solution: smrt \\
+\begin{itemize}
+	\item Requirements
+	\item User Interface
+	\item Architecture
+	\item Prototype
+\end{itemize}
+\end{itemize}
+\end{slide}
+
+\presenter{}
+\section[slide=false]{Questions}
+\begin{slide}[toc=,bm=]{Questions}
+\begin{figure}[htb]
+	\includegraphics[width=3in]{../lib/figures/fishstick}
+\end{figure}
+\end{slide}
+
+\end{document}

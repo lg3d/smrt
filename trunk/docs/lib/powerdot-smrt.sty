@@ -1,0 +1,223 @@
+%%
+%% powerdot-smrt.sty - Presentation style for smrt
+%%
+%% This is a modified version of the sailor style by Hendri Adriaens and
+%% Christropher Ellison.
+%%
+%% ----------------------------------
+%% Copyright (C) 2005 W. Evan Sheehan
+%% ----------------------------------
+%%
+%% This work may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%   http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2003/12/01 or later.
+%%
+%% This work has the LPPL maintenance status "maintained".
+%%
+%% This Current Maintainer of this work is W. Evan Sheehan
+%%
+\NeedsTeXFormat{LaTeX2e}[1995/12/01]
+\ProvidesPackage{powerdot-smrt}[2005/11/11 v1.1 sailor style (MH,HA)]
+\RequirePackage{graphicx}
+\RequirePackage{calc}
+\RequirePackage{amssymb}
+\RequirePackage{pst-grad}
+\definecolor{pddblue}{rgb}{.141,.188,.235}
+\definecolor{pdblue}{rgb}{.298,.392,.49}
+\definecolor{pdlblue}{rgb}{.522,.592,.647}
+\definecolor{pdgray}{rgb}{.8627,.8941,.9255}
+\def\@presenter{}
+\pddefinetemplate{basic}{%
+  texthook=tl,
+  titlefont=\Large\bfseries\color{white}\raggedleft,
+  iacolor=pdlblue,
+  toctcolor=pdlblue,
+  tochlcolor=white,
+  tochltcolor=pddblue,
+  ifsetup=landscape,
+  lfpos={.02\slidewidth,.02\slideheight},
+  rfpos={.98\slidewidth,.02\slideheight},
+  tocsecsep=2.5ex,
+  tocslidesep=1.2ex,
+  tocslideindent=1ex,
+  tocpos={.01\slidewidth,.8\slideheight},
+  tocwidth=.14\slidewidth,
+  tocsecm={\psline[linewidth=.5pt,linecolor=pddblue]%
+    (-.05,-.05)(.14\slidewidth,-.05)},
+  ifsetup=portrait,
+  lfpos={.02\slidewidth,.015\slideheight},
+  rfpos={.98\slidewidth,.015\slideheight},
+  tocsecsep=.1ex,
+  tocslidesep=.1ex,
+  stochook=tr,
+  stocpos={.49\slidewidth,.09\slideheight},
+  stocfont=\tiny\raggedleft,
+  stocwidth=.48\slidewidth,
+  ntocpos={.51\slidewidth,.09\slideheight},
+  ntocwidth=.48\slidewidth,
+}{}
+\pddefinetemplate[basic]{topframe}{%
+  titlehook=r,
+  rftemp=\@presenter,
+  ifsetup=landscape,
+  titlewidth=.9\slidewidth,
+  titlepos={.95\slidewidth,.92\slideheight},
+  textheight=.74\slideheight,
+  textpos={.2\slidewidth,.8\slideheight},
+  textwidth=.77\slidewidth,
+  ifsetup=portrait,
+  titlewidth=.94\slidewidth,
+  titlepos={.98\slidewidth,.95\slideheight},
+  textheight=.75\slideheight,
+  textpos={.03\slidewidth,.87\slideheight},
+  textwidth=.94\slidewidth
+}{%
+  \pdifsetup{landscape}{%
+    \pd@sailorroundedtopframe{.15\slideheight}%
+  }{%
+    \pd@sailorroundedtopframe{.1\slideheight}%
+  }%
+}
+\pddefinetemplate[basic]{titleslide}{%
+  texthook=rt,
+  textpos={.95\slidewidth,.77\slideheight},
+  textwidth=.9\slidewidth,
+  textfont=\color{pddblue}\raggedleft\tabcolsep0pt,
+  textheight=.72\slideheight,
+  titlefont=\Large\bfseries\color{white},
+  tocpos,ntocpos,stocpos,rfpos
+}{%
+  \psset{linecolor=pddblue}%
+  \pdifsetup{landscape}{%
+    \pd@sailorroundedframe{\slidewidth}{.25\slidewidth}{.7\slideheight}%
+      {.17\slideheight}%
+    \pscircle[fillstyle=solid,fillcolor=white,linestyle=solid,linecolor=pddblue,linewidth=.8pt]
+      (.25\slidewidth,.7\slideheight){.14\slideheight}
+    \rput(.25\slidewidth,.7\slideheight){\includegraphics[height=.26\slideheight]{../lib/figures/rca-cartoon.ps}}
+  }{%
+    \pd@sailorroundedframe{\slidewidth}{.25\slidewidth}{.7\slideheight}%
+      {.12\slideheight}%
+    \pscircle[fillstyle=solid,fillcolor=white,linestyle=solid,linecolor=pddblue,linewidth=.8pt]
+      (.25\slidewidth,.7\slideheight){.11\slideheight}
+    \rput(.25\slidewidth,.7\slideheight){\includegraphics[height=.22\slideheight]{../lib/figures/rca-cartoon.ps}}
+  }%
+  \pd@sailorgrad\slidewidth{.5\slideheight}%
+  \psset{linecolor=pdlblue}%
+  \psarc*(0,.2\slideheight){3pt}{270}{90}%
+  \multips(.08\slidewidth,.2\slideheight)(.08\slidewidth,0){9}{%
+    \qdisk(0,0){3pt}%
+  }%
+}
+\pddefinetemplate[topframe]{slide}{}{%
+  \pdifsetup{landscape}{%
+    \pd@sailorgrad{.16\slidewidth}{.5\slideheight}%
+    \psset{linecolor=pdlblue}%
+    \multips(.16\slidewidth,0.75pt)(0,.01\slideheight){82}{%
+      \qdisk(0,0){.75pt}%
+    }%
+  }
+  \pd@sailortocbg
+  \rput[bl](.02\slidewidth,.01\slideheight){\includegraphics[height=.14\slideheight]{../lib/figures/rca-cartoon.ps}}
+}
+\pddefinetemplate[topframe]{wideslide}{%
+  tocpos,ifsetup=landscape,
+  textpos={.03\slidewidth,.8\slideheight},
+  textwidth=.94\slidewidth
+}{%
+  \pdifsetup{portrait}\pd@sailortocbg{}%
+}
+\pddefinetemplate[slide]{sectionslide}{%
+  tocpos=,
+  stocpos={.01\slidewidth,.8\slideheight},
+  stocwidth=.14\slidewidth
+  %titlefont=\Large\bfseries\color{pddblue}\centering,
+  %titlehook=c,
+  %titlewidth=.55\slidewidth,
+  %ifsetup=landscape,
+  %titlepos={.58\slidewidth,.55\slideheight},
+  %ifsetup=portrait,
+  %titlepos={.5\slidewidth,.55\slideheight},
+}{
+  \rput[tl](.25\slidewidth,.77\slideheight){\vbox{\hsize=.67\slidewidth
+  \baselineskip=4ex \tableofcontents[content=currentsection]}}
+}
+\pddefinetemplate[basic]{sectionwideslide}{%
+  tocpos,stocpos,ntocpos,
+  titlehook=c,titlewidth=.75\slidewidth,
+  titlepos={.4\slidewidth,.695\slideheight},
+  titlefont=\Large\bfseries\color{white}\centering
+}{%
+  \pd@sailorgrad\slidewidth{.5\slideheight}%
+  \psset{linecolor=pddblue}%
+  \pdifsetup{landscape}{%
+    \pd@sailorroundedframe{0pt}{.75\slidewidth}{.7\slideheight}%
+      {.1\slideheight}%
+  }{%
+    \pd@sailorroundedframe{0pt}{.75\slidewidth}{.7\slideheight}%
+      {.07\slideheight}%
+  }%
+  \psset{linecolor=pdlblue}%
+  \psarc*(\slidewidth,.2\slideheight){3pt}{90}{270}%
+  \multips(.92\slidewidth,.2\slideheight)(-.08\slidewidth,0){9}{%
+    \qdisk(0,0){3pt}%
+  }%
+}
+\def\pd@sailorroundedtopframe#1{%
+  \setlength\@tempdima{\slideheight-#1}%
+  \psset{linewidth=0pt,fillcolor=pdblue,fillstyle=solid,linecolor=pdblue}%
+  \psframe(#1,\slideheight)(\slidewidth,\@tempdima)%
+  \pswedge*(#1,\slideheight){#1}{180}{275}%
+  \psset{linecolor=pddblue,linewidth=.8pt}%
+  \psline(\slidewidth,\@tempdima)(#1,\@tempdima)%
+  \psarc[fillstyle=none](#1,\slideheight){#1}{180}{270}%
+}
+\def\pd@sailorroundedframe#1#2#3#4{%
+  \setlength\@tempdima{#3+#4}%
+  \setlength\@tempdimb{#3-#4}%
+  \psset{linewidth=0pt,linecolor=pdblue,fillcolor=pdblue,fillstyle=solid}%
+  \psframe(#1,\@tempdima)(#2,\@tempdimb)%
+  \ifdim#1>#2\pswedge*(#2,#3){#4}{85}{275}\else\pswedge*(#2,#3){#4}{265}{95}\fi
+  \psset{linecolor=pddblue,linewidth=.8pt}%
+  \psline(#1,\@tempdima)(#2,\@tempdima)%
+  \ifdim#1>#2\psarc(#2,#3){#4}{90}{270}\else\psarc(#2,#3){#4}{270}{90}\fi
+  \psline(#1,\@tempdimb)(#2,\@tempdimb)%
+}
+\def\pd@sailorgrad#1#2{%
+  \psframe[linestyle=none,linewidth=0pt,fillstyle=gradient,%
+    gradbegin=pdgray,gradend=white,gradmidpoint=0](0,0)(#1,#2)%
+}
+\def\pd@sailortocbg{%
+  \psset{linecolor=pdlblue}%
+  \pd@sailorgrad\slidewidth{.1\slideheight}%
+  \multips(1.5pt,.1\slideheight)(.01\slidewidth,0){100}{%
+    \qdisk(0,0){.75pt}%
+  }%
+}
+\setkeys[pd]{section}{sectemp=sectionslide,widesectemp=sectionwideslide}
+\def\pd@title#1{%
+  \parbox[c][.15\textheight]{.75\slidewidth}{\raggedleft#1}%
+  \vskip-3em\vskip.2\slideheight
+}
+\def\pd@tochighlight#1{%
+  \hskip\@tempdima
+  \begin{minipage}[b]\@tempdimb
+    \pd@usedtocfont\color\pd@@tochltcolor#1%
+  \end{minipage}%
+}
+\def\labelitemi{\footnotesize\color{pdblue}\ensuremath\blacksquare}
+\def\labelitemii{\footnotesize\color{pddblue}\ensuremath\square}
+\def\labelitemiii{\tiny\color{pdblue}\ensuremath\blacksquare}
+\def\labelitemiv{\tiny\color{pddblue}\ensuremath\square}
+\pdsetup{list={labelsep=1em,leftmargin=*,itemsep=5pt,topsep=5pt,parsep=0pt}}
+\color{pddblue}
+\def\rmdefault{phv}
+\def\sfdefault{phv}
+\def\Hv@scale{.85}
+\newcommand{\presenter}[1]{\def\@presenter{#1}}
+\endinput
+%%
+%% End of file `powerdot-sailor.sty'.

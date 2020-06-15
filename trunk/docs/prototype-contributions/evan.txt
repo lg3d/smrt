@@ -1,0 +1,11 @@
+In the beginning I helped to figure out how to use lg3d. I worked on drawing
+images using their API, lighting them, and manipulating them with user input --
+I drew a green box on the screen, lit it, and rotated it when the arrow keys
+were pressed. This was primarily to better understand how to listen for events
+in lg3d. After that, I helped David get the text working in the ring menu.
+I accidentally discovered the Text2D widget in lg3d CVS while working on writing
+my own text widget. After David implemented it to display the text, I figured
+out how to calculate its width so we could center it under the images in the
+menu. Then I started work on XMLTV integration. I created an XMLTV parser and
+subclassed ArcMenu as TvArcMenu to display channel information. The parser is
+still in need of debugging, but is fairly close to complete.

@@ -1,0 +1,49 @@
+<project name="smrt prototype" default="compile" basedir=".">
+	<property name="srcdir" location="src"/>
+	<property name="classdir" location="classes"/>
+	<property name="docdir" location="javadoc"/>
+
+	<target name="init">
+		<mkdir dir="${classdir}"/>
+		<mkdir dir="${docdir}"/>
+	</target>
+
+	<target name="compile" depends="init">
+		<javac srcdir="${srcdir}" destdir="${classdir}">
+			<compilerarg value="-g" />
+			<classpath>
+				<pathelement location="${classpath}"/>
+				<pathelement location="lib/lg3d-core.jar"/>
+			</classpath>
+		</javac>
+	</target>
+
+	<target name="compile-lint" depends="init">
+		<javac srcdir="${srcdir}" destdir="${classdir}">
+			<compilerarg value="-Xlint" />
+			<classpath>
+				<pathelement location="${classpath}"/>
+				<pathelement location="lib/lg3d-core.jar"/>
+			</classpath>
+		</javac>
+	</target>
+
+	<target name="javadoc">
+		<javadoc
+		 sourcepath="${srcdir}"
+		 destdir="${docdir}"
+		 author="true"
+		 version="true"
+		 use="false"
+		 windowtitle="smrt">
+			<fileset dir="${srcdir}">
+				<include name="**/*.java"/>
+			</fileset>
+	 	</javadoc>
+	</target>
+
+	<target name="clean">
+		<delete dir="${classdir}"/>
+		<delete dir="${docdir}"/>
+	</target>
+</project>

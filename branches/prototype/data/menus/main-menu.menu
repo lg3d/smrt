@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="1.5.0" class="java.beans.XMLDecoder">
+	<object class="org.jdesktop.lg3d.apps.smrt.menu.RingMenu"/>
+	<object class="org.jdesktop.lg3d.apps.smrt.menu.IconItem">
+		<void property="iconFilename"><string>data/images/gamecube.png</string></void>
+		<void property="iconAspect"><float>1.0</float></void>
+		<void property="label"><string>Nintendo Gamecube</string></void>
+	</object>
+	<object class="org.jdesktop.lg3d.apps.smrt.menu.IconItem">
+		<void property="iconFilename"><string>data/images/n64.png</string></void>
+		<void property="iconAspect"><float>1.0</float></void>
+		<void property="label"><string>Nintendo 64</string></void>
+	</object>
+	<object class="org.jdesktop.lg3d.apps.smrt.menu.IconItem">
+		<void property="iconFilename"><string>data/images/playstation.png</string></void>
+		<void property="iconAspect"><float>1.0</float></void>
+		<void property="label"><string>PlayStation</string></void>
+		<void property="action"><string>push</string></void>
+		<void property="actionArgument"><string>arc-menu</string></void>
+	</object>
+	<object class="org.jdesktop.lg3d.apps.smrt.menu.IconItem">
+		<void property="iconFilename"><string>data/images/tv.png</string></void>
+		<void property="iconAspect"><float>1.0</float></void>
+		<void property="label"><string>Watch TV</string></void>
+		<void property="action"><string>push</string></void>
+		<void property="actionArgument"><string>tv</string></void>
+	</object>
+	<object class="org.jdesktop.lg3d.apps.smrt.menu.IconItem">
+		<void property="iconFilename"><string>data/images/speaker.png</string></void>
+		<void property="iconAspect"><float>1.0</float></void>
+		<void property="label"><string>Listen to music</string></void>
+		<void property="action"><string>push</string></void>
+		<void property="actionArgument"><string>arc</string></void>
+	</object>
+	<object class="org.jdesktop.lg3d.apps.smrt.menu.IconItem">
+		<void property="iconFilename"><string>data/images/video.png</string></void>
+		<void property="iconAspect"><float>1.0</float></void>
+		<void property="label"><string>Watch a video</string></void>
+		<void property="action"><string>push</string></void>
+		<void property="actionArgument"><string>video</string></void>
+	</object>
+</java>

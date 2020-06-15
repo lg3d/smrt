@@ -1,0 +1,493 @@
+\documentclass[letterpaper, titlepage, 11pt]{article}
+\usepackage[usenames]{color}
+\usepackage{fullpage}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{titling}
+\usepackage{ifthen}
+
+% This is here so we can have a fancier title page than LaTeX gives us by default
+\newcommand{\department}[1]{%
+  \gdef\dept{#1}}
+\newcommand{\dept}{}
+\renewcommand{\maketitlehookd}{%
+\par\noindent \dept }
+
+\newcommand{\testitem}[8]{%
+  \ifthenelse{\equal{#1}{}}{}{\subsubsection{#1}}
+  \begin{tabular}{lp{4in}}
+  \textbf{Purpose}         & {#2} \\
+  \textbf{Procedure}       & {#3} \\
+  \textbf{Expected Result} & {#4} \\
+  \textbf{Comments}        & {#5} \\
+  \textbf{Date}            & {#6} \\
+  \textbf{Tester}          & {#7} \\
+  \textbf{Outcome}         &
+    \ifthenelse{\equal{#8}{pass}}{\textcolor{green}{Pass}}{%
+      \ifthenelse{\equal{#8}{fail}}{\textcolor{red}{Fail}}{#8}
+    } \\
+  \end{tabular}
+}
+
+\title{
+	smrt: A 3D Media Center User Interface
+	\\
+	Test Plan
+}
+\author{
+	Cory Maccarrone  \\ {\small \href{mailto:Cory.Maccarrone@colorado.edu}{Cory.Maccarrone@colorado.edu}}
+	\and
+	Daniel Seikaly   \\ {\small \href{mailto:Daniel.Seikaly@colorado.edu}{Daniel.Seikaly@colorado.edu}}
+	\and
+	Evan Sheehan     \\ {\small \href{mailto:Wallace.Sheehan@gmail.com}{Wallace.Sheehan@gmail.com}}
+	\and
+	David Trowbridge \\ {\small \href{mailto:trowbrds@gmail.com}{trowbrds@gmail.com}}
+}
+\department{
+\begin{center}
+	CSCI 4308-4318. Software Engineering Project 1 \& 2 \\
+	Department of Computer Science \\
+	University of Colorado at Boulder \\
+	2005-2006 \\
+	\vspace{1.5em}
+	Sun Microsystems \\
+	Santa Clara, CA \\
+	\vspace{1em}
+	Paul Byrne \\
+	{\small \href{mailto:Paul.Byrne@Sun.COM}{Paul.Byrne@Sun.COM}} \\
+	\vspace{1em}
+	Hideya Kawahara \\
+	{\small \href{mailto:Hideya.Kawahara@Sun.COM}{Hideya.Kawahara@Sun.COM}}
+\end{center}
+}
+
+\begin{document}
+\maketitle
+
+\raggedbottom
+
+\pagenumbering{roman}
+
+\hspace{1em}
+\pagebreak
+
+\tableofcontents
+\listoffigures
+\pagebreak
+
+\hspace{1em}
+\pagebreak
+
+\pagenumbering{arabic}
+
+\include{project-proposal}
+\input{introduction-common}
+This document defines the test plan for \textit{smrt}. These tests will
+demonstrate that \textit{smrt} meets the requirements defined in the
+\textit{Requirements Specification}. The hardware and software environments are
+defined in section \ref{sec:environment}, followed by a definition of all the
+tests. Each test definition provides a purpose, procedure, and expected result.
+The purpose explains the reason for running this particular test. The procedure
+defines the steps for running the test. And the expected result defines the
+conditions for passing the test. In addition to the fields that define the
+test, each test has the following fields: comments, date, tester, and outcome.
+These fields provide information about the results of running the test.
+
+\section{Testing Environment}
+\label{sec:environment}
+Hardware and software requirements for running the tests are outlined below.
+
+\subsection{Software}
+\textit{smrt}'s test environment requires the following software:
+\begin{itemize}
+\item Linux
+\item X11 window system with Direct Rendering Infrastructure (DRI)
+\item Java 5.0 or higher
+\item Looking Glass 3D 0.7.1 or higher
+\end{itemize}
+
+\subsection{Hardware}
+\textit{smrt}'s hardware requirements are fairly minimal:
+\begin{itemize}
+\item Input device -- i.e. keyboard
+\item Display -- i.e. a monitor or TV
+\end{itemize}
+
+\section{Tests}
+Tests are organized into groups that target specific areas of the program.
+
+Each test in the test plan has several components:
+\newline
+\testitem{}
+  {the reason for the test.}
+  {the steps to follow to conduct the test.}
+  {the results necessary to pass the test.}
+  {any comments the tester might have.}
+  {date the test was conducted.}
+  {name of the person conducting the test.}
+  {outcome of the test (\textcolor{green}{Pass} or \textcolor{red}{Fail}).}
+
+\subsection{Display Resolution Tests}
+The display resolution tests verify that \textit{smrt} can adapt to multiple
+displays so that it is viewable on different televisions and monitors.
+Completion of these tests is considered to verify the display resolution
+requirement set in section 3.2.1 of \textit{smrt}: Requirements.
+
+\testitem{Ring Menu Active Resize}
+  {
+    This test determines if the ring menu behaves correctly with different
+    screen resolutions.
+  }
+  {
+    Start \textit{smrt}.  Browse to a ring menu if the main menu is not a
+    ring.  Resize the window.
+  }
+  {
+    When first displayed, the ring menu should fit on the screen.  As the
+    window is resized, the ring menu should scale to fit the new resolution.
+  }
+  {}{May 5 2006}{David Trowbridge}{pass}
+
+\testitem{Ring Menu Passive Resize}
+  {
+    This test determines if the ring menu behaves correctly when a resolution
+    change occurs in a child menu from the ring menu.
+  }
+  {
+    Start \textit{smrt}.  Browse to a ring menu if the main menu is not a
+    ring.  Select an item in the menu to move to another menu.  Resize
+    the window.  Escape back to the ring menu.
+  }
+  {
+    When resized, the ring menu should fit the new dimensions correctly. Also,
+    the Heads Up Display (HUD), the menu bars at the top and bottom of the 
+    display, will appear at the proper edges of the screen, and all items will be
+    sized according to new window dimensions.
+  }
+  {}{May 5 2006}{David Trowbridge}{pass}
+
+\testitem{Arc Menu Active Resize}
+  {
+    This test determines if the arc menu behaves correctly with different
+    screen resolutions.
+  }
+  {Start \textit{smrt}.  Browse to an arc menu.  Resize the window.}
+  {
+    When first displayed, the arc menu should fit on the screen.  As the
+    window is resized, the arc menu should scale to fit the new resolution.
+  }
+  {}{May 5 2006}{David Trowbridge}{pass}
+
+\testitem{Arc Menu Passive Resize}
+  {
+      This test determines if the arc menu behaves correctly when a resolution
+      change occurs in a child menu from the arc menu.
+  }
+  {
+    Start \textit{smrt}.  Browse to an arc menu.  Select an item in the
+    menu to move to another menu.  Resize the window.  Escape back to the
+    arc menu.
+  }
+  {
+    When resized, the arc menu should fit the new dimensions correctly,
+    with the HUD at the proper edges of the screen and all items sized
+    according to new window dimensions.
+  }
+  {Requires changing the default config}{May 5 2006}{David Trowbridge}{pass}
+
+\testitem{Cityscape Menu Active Resize}
+  {
+    This test determines if the cityscape behaves correctly with different
+    screen resolutions.
+  }
+  {Start \textit{smrt}.  Browse to a cityscape.  Resize the window.}
+  {
+    When first displayed, the cityscape should show an easily-readable
+    number of items on the screen (dependent on cityscape contents).  As
+    the window is resized, it should scale to fit the new resolution while
+    displaying the same picture.
+  }
+  {Requires changing the default config}{May 5 2006}{David Trowbridge}{pass}
+
+\testitem{Cityscape Menu Passive Resize}
+  {
+    This test determines if the cityscape menu behaves correctly when a
+    resolution change occurs in a child menu from the cityscape menu.
+  }
+  {
+    Start \textit{smrt}.  Browse to a cityscape.  Select an item in the
+    menu to move to another menu.  Resize the window.  Escape back to the
+    cityscape menu.
+  }
+  {
+    When resized, the cityscape menu should fit the new dimensions correctly,
+    with the HUD at the proper edges of the screen and all items sized
+    according to new window dimensions.
+  }
+  {}{May 5 2006}{David Trowbridge}{pass}
+
+\testitem{Background Resize}
+  {
+    This test determines if the background image behaves correctly with
+    different screen resolutions.
+  }
+  {Start \textit{smrt}.  Resize the window.}
+  {
+    When first displayed, the background image should fit the screen exactly.
+    As the window is resized, it should scale to fit the new resolution.
+  }
+  {}{May 5 2006}{David Trowbridge}{pass}
+
+\testitem{Application Resize}
+  {
+    This test determines if application windows behave correctly with
+    different screen resolutions.
+  }
+  {Start \textit{smrt}.  Browse to a file and launch it.  Resize the window.}
+  {
+    When first displayed, the application window should fill the screen.
+    As the window is resized, the application should scale to fit the
+    new resolution.
+  }
+  {}{May 5 2006}{David Trowbridge}{pass}
+
+\subsection{Basic Interaction Tests}
+Basic interaction tests verify \textit{smrt}'s responses to user input. These
+tests cover the requirements in section 3.2.2 of \textit{smrt}: Requirements.
+
+\testitem{Ring Menu Interaction}
+  {
+    This test determines if the ring menu is functioning properly.
+  }
+  {
+    Start \textit{smrt}.  Browse to a ring menu which is not the main menu.
+    Press left and right to spin the ring.  Press enter to choose an item.
+    Press escape to return to the ring menu, then escape again to destroy it.
+  }
+  {
+    The left key should spin the ring menu so that the element to the left
+    of the currently-selected item rotates to become selected.  Similarly, the
+    right key should spin the menu to select the item to the right.  The enter
+    key should select the current item, and the escape key should go back to
+    the previous menu.
+  }
+  {
+    Last test (popping) requires changing the default config
+  }
+  {May 5 2006}{David Trowbridge}{pass}
+
+\testitem{Arc Menu Interaction}
+  {
+    This test determines if the arc menu is functioning properly.
+  }
+  {
+    Start \textit{smrt}.  Browse to an arc menu.  Press up and down to move
+    the arc.  Press right and left to page through the arc.  Press enter to
+    choose an item.  Press escape to return to the arc menu, then escape again
+    to destroy it.
+  }
+  {
+    The up key should move the arc to select the element above the currently
+    selected item.  Similarly, the down key should select the item below.  The
+    right key should "page down" through the arc, and left should "page up."
+    The enter key should select the current item, and the escape key should go
+    back to the previous menu.
+  }
+  {}{May 5 2006}{David Trowbridge}{pass}
+
+\testitem{Cityscape Menu Interaction}
+  {
+    This test determines if the cityscape menu is functioning properly.
+  }
+  {
+    Start \textit{smrt} and browse to a cityscape menu. Press up, down, left,
+    and right to navigate the cityscape. Press enter while a directory is
+    selected. Press escape to return to the previous cityscape, then press
+    escape again to exit the cityscape.
+  }
+  {
+    The direction keys should select the next item in that direction, if there
+    is one -- i.e. up should select the item immediately above the current item,
+    right should select the item to the right, etc. When a directory is selected
+    the view should zoom in on that building and display its contents as a
+    cityscape menu. The escape key should return to the previous menu.
+  }
+  {}{May 5 2006}{David Trowbridge}{pass}
+
+\testitem{Application Launching}
+  {
+    This test verifies that applications are correctly launched when certain
+    files are selected from a cityscape menu.
+  }
+  {
+    Navigate to a supported file type (e.g. \texttt{.avi}, or \texttt{.mp3}) in
+    a cityscape menu. Press enter to activate the file.
+  }
+  {
+    Xine should be started full-screen. It should immediately begin playing the
+    file.
+  }
+  {}{May 5 2006}{David Trowbridge}{pass}
+
+\testitem{Application Interaction}
+  {
+    This test verifies that the user can interact with external applications
+    when they are launched inside of \textit{smrt}.
+  }
+  {
+    Launch a video file in Xine. Press the left and right keys. Press the up and
+    down keys. Press the space bar. Press escape.
+  }
+  {
+    The right key should fast-forward, the left key should rewind the video. Up
+    should increase playback speed, down should decrease playback speed. The
+    space bar should pause playback. Escape should quit Xine and return to the
+    previous menu.
+  }
+  {}{May 5 2006}{David Trowbridge}{pass}
+
+\testitem{Television Interaction}
+  {
+    This test determines if the required functionality for watching TV is
+    working correctly.
+  }
+  {
+    Navigate to a \texttt{TvArcMenu}. Press the up and down keys a few times.
+    Press enter on a channel to select it. Press escape to return to the menu.
+  }
+  {
+    Pressing up and down should move the menu up and down, changing the
+    selection. When the selection changes, the program information and the
+    preview should change to the currently selected channel. Pressing enter
+    should launch an application to display the TV channel full-screen. Pressing
+    escape should quit the application and return to the menu with the
+    previously selected channel centered in the menu.
+  }
+  {}{May 5 2006}{David Trowbridge}{pass}
+
+\subsection{Scalability Tests}
+Scalability tests verify \textit{smrt}'s ability to handle large and small media
+collections. Completion of these tests verify the scalability requirements
+defined in section 3.2.3 of \textit{smrt}: Requirements.
+
+\testitem{Directory Scalability}
+  {
+    This test verifies \textit{smrt}'s ability to handle large quantities of
+    directories. The Requirements document defines this as at least 300 albums.
+  }
+  {
+    Navigate to a cityscape menu containing at least 300 directories. Move
+    around the cityscape using the up, down, left, and right keys. Select a
+    directory. Press escape to return to the cityscape. Press escape to leave
+    the cityscape.
+  }
+  {
+    The performance of the system should not be impacted significantly due to
+    the size of the menu. There should be no noticeable difference between the
+    behavior in this test and the Cityscape Menu Interaction test.
+  }
+  {
+    Performance is slow but usable as sub-levels are loaded.  After that, speed
+    is fine (with a capable graphics card).
+  }
+  {May 5 2006}{David Trowbridge}{pass}
+
+\testitem{Empty Directory Scalability}
+  {
+    This test verifies \textit{smrt}'s ability to handle directories that
+	contain no files or directories.
+  }
+  {
+    Navigate to a cityscape menu containing no files or directories.
+  }
+  {
+    The cityscape menu should display a small table with no items on it.
+    All navigation should be disabled except for the back button.
+  }
+  {}{May 5 2006}{David Trowbridge}{pass}
+
+\testitem{File Scalability}
+  {
+    This test verifies \textit{smrt}'s ability to manage large quantities of
+    files. The Requirements document defines this as at least 2,000 songs, or
+    200 movies.
+  }
+  {
+    Navigate to a cityscape menu containing at least 2,000 music files. Move
+    around the cityscape using the up, down, left, and right keys. Select a file
+    for playback. Press escape to return to the menu. Press escape to leave the
+    menu.
+  }
+  {
+    The performance of the system should not be impacted significantly due to
+    the size of the menu. There should be no noticeable difference between the
+    behavior in this test and the Cityscape Menu Interaction test.
+
+  }
+  {
+    Like directories, loading takes a while due to I/O.  After this, interaction
+    is fine.
+  }
+  {May 5 2006}{David Trowbridge}{pass}
+
+\testitem{User Interaction Scalability}
+  {
+    This test demonstrates that \textit{smrt} improves user interaction compared
+    to existing media center applications.
+  }
+  {
+    In \textit{smrt}, navigate to a cityscape menu containing video or music
+    files. Browse to a predetermined file and activate it by pressing enter.
+    Note the number of ``clicks'' required to accomplish this.  Exit
+    \textit{smrt}. Start a different media center application such as Freevo.
+    Navigate to the same file in Freevo and activate it. Note the number of
+    ``clicks'' required to accomplish this.
+  }
+  {
+    The number of button presses required to get to and activate the file in
+    \textit{smrt} should be less than the number of button presses in Freevo.
+  }
+  {
+    Tested using freevo and several different files.  Number of clicks was
+    smaller, especially in large directories.  In very small directories, the
+    difference was not very noticible.
+  }
+  {May 5 2006}{David Trowbridge}{pass}
+
+\pagebreak
+
+\section{Summary}
+The tests defined in this document will be used to verify that the requirements
+defined in \textit{smrt}: Requirements have been met. The tests defined here
+fall into three categories that reflect the three categories in the requirements
+document: display requirements, user interaction requirements, and scalability
+requirements. These tests should provide sufficient information to determine
+whether \textit{smrt} meets the requirements defined in the requirements
+document or not.
+
+\appendix
+
+\section{Related Documents}
+
+\begin{list}{}{
+\setlength{\parsep}{1ex}
+\setlength{\leftmargin}{0.5in}
+\setlength{\itemindent}{-0.5in}
+}
+
+\item[] \textbf{[Maccarrone et al. 05]}
+
+	Maccarrone, Cory, Daniel Seikaly, Evan Sheehan, and David Trowbridge.
+	\textit{smrt: Requirements}. 2005.
+
+	The requirements document for the \textit{smrt} project.
+
+\item[] \textbf{[Project Looking Glass]}
+
+	http://lg3d-core.dev.java.net/
+
+	The open source web site for Sun's Project Looking Glass.
+\end{list}
+
+\end{document}

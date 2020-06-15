@@ -1,0 +1,46 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+</head>
+<body bgcolor="white">
+
+Menu and item classes.
+
+<h2>Package Specification</h2>
+
+<p>Menus are the heart of smrt's user interface.  All menus inherit from an
+abstract base class, <code>Menu</code>, that implements the
+<code>Context</code> interface. Each <code>Menu</code> subclass is responsible
+for tracking the items in the menu, handling event processing, and displaying
+the menu items on screen. Menu classes use a layout class to position their
+items on screen.  The layout classes position menu items on screen according to
+the menu type; so for each menu type -- ring, arc, and cityscape -- there is a
+corresponding layout class that displays the menu's items on the screen. The
+<code>RingLayout</code> class, for example, places the items in a
+<code>RingMenu</code> on screen in a circle, as shown in Figure 2. When a menu
+receives an event that should change which menu item is currently selected, the
+menu instructs its layout class to move its menu items to reflect this change.
+This is effectively a Looking Glass implementation detail, but it makes it
+possible to create specialized subclasses of a menu type without worrying
+about reimplementing the layout mechanisms.</p>
+
+<div align="center">
+<img src="doc-files/menu-uml.png" width="550" height="326" alt="smrt's menu class hierarchy."/>
+</div>
+
+<p>Special purpose menus (such as the <code>TvArcMenu</code> and
+<code>FilesystemCity</code>) subclass one of the concrete menu classes to
+implement their own functionality using one of the three menu layouts.  These
+menus differ from their parents by how they populate themselves with menu
+items. Most <code>Menu</code> subclasses are populated with items specified by
+an XML file. These special purpose menus do not however. Rather, they override
+their parent's realize() method to populate themselves when they are displayed.
+For example the cityscape menu, used for browsing the file system, must create
+menu items from files and directories in a given root directory. It would be
+unreasonable to expect the user to produce an XML file specifying their entire
+file system.</p>
+
+
+
+</body>
+</html>

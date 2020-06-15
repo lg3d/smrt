@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="1.5.0" class="java.beans.XMLDecoder">
+	<object class="org.jdesktop.lg3d.apps.smrt.menu.FilesystemCity">
+		<void property="title"><string>Movies</string></void>
+		<void property="path"><string>/tmp/media/movies</string></void>
+		<void property="exclusionFilter"><object class="org.jdesktop.lg3d.apps.smrt.file.filter.DotFileExclusion"/></void>
+		<void property="filenameFilter"><object class="org.jdesktop.lg3d.apps.smrt.file.filter.PrettyPrint"/></void>
+	</object>
+</java>

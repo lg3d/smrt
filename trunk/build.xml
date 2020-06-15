@@ -1,0 +1,117 @@
+<project name="smrt prototype" default="compile" basedir=".">
+	<property name="srcdir" location="src"/>
+	<property name="classdir" location="classes"/>
+	<property name="docdir" location="javadoc"/>
+
+	<target name="init">
+		<mkdir dir="${classdir}"/>
+		<mkdir dir="${docdir}"/>
+	</target>
+
+	<target name="compile" depends="init">
+		<javac srcdir="${srcdir}" destdir="${classdir}">
+			<compilerarg value="-g" />
+			<compilerarg value="-Xlint:deprecation" />
+			<compilerarg value="-Xlint:unchecked" />
+			<classpath>
+				<pathelement location="${classpath}"/>
+				<pathelement location="lib/lg3d-core.jar"/>
+			</classpath>
+		</javac>
+	</target>
+
+	<target name="compile-lint" depends="init">
+		<javac srcdir="${srcdir}" destdir="${classdir}">
+			<compilerarg value="-Xlint" />
+			<classpath>
+				<pathelement location="${classpath}"/>
+				<pathelement location="lib/lg3d-core.jar"/>
+			</classpath>
+		</javac>
+	</target>
+
+	<target name="javadoc">
+		<javadoc
+		 sourcepath="${srcdir}"
+		 packagenames="org.jdesktop.lg3d.apps.smrt*"
+		 destdir="${docdir}"
+		 author="true"
+		 version="true"
+		 use="true"
+		 Overview="src/overview.html"
+		 includenosourcepackages="true"
+		 windowtitle="smrt">
+			<fileset dir="${srcdir}">
+				<include name="**/*.java"/>
+			</fileset>
+			<classpath>
+				<pathelement location="${classpath}"/>
+				<pathelement location="lib/lg3d-core.jar"/>
+			</classpath>
+	 	</javadoc>
+
+		<!-- For some reason, ant/javadoc is only copying the
+		     overview-level doc-files directory.  Do the rest by hand.
+		     -->
+		<copy todir="${docdir}/org/jdesktop/lg3d/apps/smrt/doc-files">
+			<fileset dir="${srcdir}/smrt/doc-files"/>
+		</copy>
+		<copy todir="${docdir}/org/jdesktop/lg3d/apps/smrt/menu/doc-files">
+			<fileset dir="${srcdir}/smrt/menu/doc-files"/>
+		</copy>
+	</target>
+
+	<target name="package" depends="javadoc">
+		<exec executable="date" outputproperty="date">
+			<arg value="+%d%m%Y"/>
+		</exec>
+		<tar destfile="smrt-${date}.tar.gz" compression="gzip">
+			<tarfileset dir="${srcdir}" prefix="smrt/src">
+				<include name="**/*.java"/>
+			</tarfileset>
+			<tarfileset dir="javadoc" prefix="smrt/javadoc"/>
+			<tarfileset dir="lib" prefix="smrt/lib"/>
+			<tarfileset dir="data" prefix="smrt/data"/>
+			<tarfileset dir="." prefix="smrt">
+				<include name="build.xml"/>
+				<include name="index.html"/>
+			</tarfileset>
+			<tarfileset dir="." prefix="smrt" mode="755">
+				<include name="smrt"/>
+			</tarfileset>
+		</tar>
+	</target>
+
+	<target name="build-package" depends="compile-lint,javadoc">
+		<exec executable="date" outputproperty="date">
+			<arg value="+%d%m%Y"/>
+		</exec>
+		<tar destfile="smrt-build-${date}.tar.gz" compression="gzip">
+			<tarfileset dir="${srcdir}" prefix="smrt/src">
+				<include name="**/*"/>
+			</tarfileset>
+			<tarfileset dir="classes" prefix="smrt/classes"/>
+			<tarfileset dir="javadoc" prefix="smrt/javadoc"/>
+			<tarfileset dir="lib" prefix="smrt/lib"/>
+			<tarfileset dir="data" prefix="smrt/data"/>
+			<tarfileset dir="lg3d-x11" prefix="smrt/lg3d-x11" mode="755">
+				<include name="x86/programs/Xserver/Xvfb"/>
+				<include name="amd64/programs/Xserver/Xvfb"/>
+			</tarfileset>
+			<tarfileset dir="." prefix="smrt">
+				<include name="build.xml"/>
+			</tarfileset>
+			<tarfileset dir="." prefix="smrt" mode="755">
+				<include name="smrt"/>
+			</tarfileset>
+		</tar>
+	</target>
+
+	<target name="clean">
+		<delete dir="${classdir}"/>
+		<delete dir="${docdir}"/>
+		<delete>
+			<fileset dir="." includes="*.tar.gz"/>
+		</delete>
+	</target>
+</project>

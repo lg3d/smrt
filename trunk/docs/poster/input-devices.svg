@@ -1,0 +1,729 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://web.resource.org/cc/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://inkscape.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="1200"
+   height="1200"
+   id="svg2"
+   sodipodi:version="0.32"
+   inkscape:version="0.43"
+   version="1.0"
+   sodipodi:docbase="/home/evan/Desktop/Projects/smrt/docs/poster"
+   sodipodi:docname="input-devices.svg">
+  <defs
+     id="defs4">
+    <linearGradient
+       y2="109.80818"
+       x2="312.5"
+       y1="96.916199"
+       x1="275.5"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient2359"
+       xlink:href="#linearGradient2195"
+       inkscape:collect="always" />
+    <linearGradient
+       y2="109.80818"
+       x2="312.5"
+       y1="96.916199"
+       x1="275.5"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient2357"
+       xlink:href="#linearGradient2195"
+       inkscape:collect="always" />
+    <linearGradient
+       y2="102.96934"
+       x2="295.50006"
+       y1="87.612198"
+       x1="259.99991"
+       gradientTransform="translate(0.216224,0.608114)"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient2355"
+       xlink:href="#linearGradient2195"
+       inkscape:collect="always" />
+    <linearGradient
+       y2="105.17926"
+       x2="200"
+       y1="91.964973"
+       x1="164.49992"
+       gradientTransform="translate(0.216224,0.608114)"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient2353"
+       xlink:href="#linearGradient2195"
+       inkscape:collect="always" />
+    <linearGradient
+       y2="149.3979"
+       x2="248.43292"
+       y1="138.32646"
+       x1="212.93294"
+       gradientTransform="translate(0.216224,0.608114)"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient2351"
+       xlink:href="#linearGradient2195"
+       inkscape:collect="always" />
+    <linearGradient
+       y2="52.112194"
+       x2="248.49998"
+       y1="42.469337"
+       x1="213"
+       gradientTransform="translate(0.216224,0.608114)"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient2349"
+       xlink:href="#linearGradient2195"
+       inkscape:collect="always" />
+    <linearGradient
+       id="linearGradient2195">
+      <stop
+         id="stop2197"
+         offset="0"
+         style="stop-color:#c6c6c6;stop-opacity:1;" />
+      <stop
+         id="stop2199"
+         offset="1"
+         style="stop-color:#ffffff;stop-opacity:1;" />
+    </linearGradient>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.64416667"
+     inkscape:cx="600"
+     inkscape:cy="600"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     inkscape:window-width="1280"
+     inkscape:window-height="945"
+     inkscape:window-x="0"
+     inkscape:window-y="25" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <text
+       xml:space="preserve"
+       style="font-size:60px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="392.98828"
+       y="45.585938"
+       id="text1307"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="392.98828"
+         y="45.585938"
+         id="tspan1311">Input Devices</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:50px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:100%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="-1.0742188"
+       y="148.57141"
+       id="text1306"
+       sodipodi:linespacing="100%"><tspan
+         sodipodi:role="line"
+         x="-1.0742188"
+         y="148.57141"
+         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:100%;writing-mode:lr-tb;text-anchor:start;font-family:Bitstream Vera Sans"
+         id="tspan1318">Within the living room, there is no keyboard or mouse, not</tspan><tspan
+         sodipodi:role="line"
+         x="-1.0742188"
+         y="188.57141"
+         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:100%;writing-mode:lr-tb;text-anchor:start;font-family:Bitstream Vera Sans"
+         id="tspan1320">to mention the advanced 3-D input devices traditionally</tspan><tspan
+         sodipodi:role="line"
+         x="-1.0742188"
+         y="228.57141"
+         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:100%;writing-mode:lr-tb;text-anchor:start;font-family:Bitstream Vera Sans"
+         id="tspan1330">used for 3D user interfaces.  Even within the scope of</tspan><tspan
+         sodipodi:role="line"
+         x="-1.0742188"
+         y="268.57141"
+         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:100%;writing-mode:lr-tb;text-anchor:start;font-family:Bitstream Vera Sans"
+         id="tspan1332">remote controls, there are very complex and very simple</tspan><tspan
+         sodipodi:role="line"
+         x="-1.0742188"
+         y="308.57141"
+         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:100%;writing-mode:lr-tb;text-anchor:start;font-family:Bitstream Vera Sans"
+         id="tspan1568">examples.  Apple Inc.'s &quot;Front Row&quot; remote control has</tspan><tspan
+         sodipodi:role="line"
+         x="-1.0742188"
+         y="348.57141"
+         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:100%;writing-mode:lr-tb;text-anchor:start;font-family:Bitstream Vera Sans"
+         id="tspan1582">only 6 buttons.</tspan><tspan
+         sodipodi:role="line"
+         x="-1.0742188"
+         y="388.57141"
+         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:100%;writing-mode:lr-tb;text-anchor:start;font-family:Bitstream Vera Sans"
+         id="tspan1584" /><tspan
+         sodipodi:role="line"
+         x="-1.0742188"
+         y="428.57141"
+         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:100%;writing-mode:lr-tb;text-anchor:start;font-family:Bitstream Vera Sans"
+         id="tspan1586">Due to the wide variety in remote</tspan><tspan
+         sodipodi:role="line"
+         x="-1.0742188"
+         y="468.57141"
+         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:100%;writing-mode:lr-tb;text-anchor:start;font-family:Bitstream Vera Sans"
+         id="tspan1588">control features, the smrt</tspan><tspan
+         sodipodi:role="line"
+         x="-1.0742188"
+         y="508.57141"
+         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:100%;writing-mode:lr-tb;text-anchor:start;font-family:Bitstream Vera Sans"
+         id="tspan1596">interface is designed to work with</tspan><tspan
+         sodipodi:role="line"
+         x="-1.0742188"
+         y="548.57141"
+         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:100%;writing-mode:lr-tb;text-anchor:start;font-family:Bitstream Vera Sans"
+         id="tspan1600">only a small number of buttons.</tspan><tspan
+         sodipodi:role="line"
+         x="-1.0742188"
+         y="588.57141"
+         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:100%;writing-mode:lr-tb;text-anchor:start;font-family:Bitstream Vera Sans"
+         id="tspan1602">The four directional buttons, an</tspan><tspan
+         sodipodi:role="line"
+         x="-1.0742188"
+         y="628.57141"
+         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:100%;writing-mode:lr-tb;text-anchor:start;font-family:Bitstream Vera Sans"
+         id="tspan1604">&quot;enter&quot; button and an &quot;escape&quot;</tspan><tspan
+         sodipodi:role="line"
+         x="-1.0742188"
+         y="668.57141"
+         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:100%;writing-mode:lr-tb;text-anchor:start;font-family:Bitstream Vera Sans"
+         id="tspan1606">button are the only ones required</tspan><tspan
+         sodipodi:role="line"
+         x="-1.0742188"
+         y="708.57141"
+         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:100%;writing-mode:lr-tb;text-anchor:start;font-family:Bitstream Vera Sans"
+         id="tspan1624">to navigate through the menus.</tspan></text>
+    <g
+       id="g1539"
+       inkscape:label="Layer 1"
+       transform="matrix(3.813521,0,0,3.813521,673.2289,307.9751)">
+      <g
+         transform="translate(-157.5838,-26.26397)"
+         id="g2335">
+        <path
+           style="fill:url(#linearGradient2349);fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.866;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           d="M 230.96621,32.903234 L 213.64914,67.53738 L 248.28328,67.53738 L 230.96621,32.903234 z "
+           id="path1309"
+           sodipodi:nodetypes="cccc" />
+        <path
+           style="fill:url(#linearGradient2351);fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.86585367px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="M 230.89915,163.03737 L 213.58208,128.40323 L 248.21622,128.40323 L 230.89915,163.03737 z "
+           id="path2189"
+           sodipodi:nodetypes="cccc" />
+        <path
+           style="fill:url(#linearGradient2353);fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.866;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           d="M 165.14914,98.287376 L 199.78329,115.60444 L 199.78329,80.970306 L 165.14914,98.287376 z "
+           id="path2191"
+           sodipodi:nodetypes="cccc" />
+        <path
+           style="fill:url(#linearGradient2355);fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.866;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           d="M 295.28328,98.220309 L 260.64914,80.903239 L 260.64914,115.53738 L 295.28328,98.220309 z "
+           id="path2193"
+           sodipodi:nodetypes="cccc" />
+        <g
+           id="g2273"
+           transform="translate(0.216224,0.608114)">
+          <path
+             transform="matrix(1.108108,0,0,1.108108,-95.28377,-16.17428)"
+             d="M 312 103.36219 A 18 18 0 1 1  276,103.36219 A 18 18 0 1 1  312 103.36219 z"
+             sodipodi:ry="18"
+             sodipodi:rx="18"
+             sodipodi:cy="103.36219"
+             sodipodi:cx="294"
+             id="path1314"
+             style="fill:url(#linearGradient2357);fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+             sodipodi:type="arc" />
+          <text
+             id="text2261"
+             y="102.36219"
+             x="219"
+             style="font-size:12px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+             xml:space="preserve"><tspan
+               y="102.36219"
+               x="219"
+               id="tspan2263"
+               sodipodi:role="line">ENT</tspan></text>
+        </g>
+        <g
+           id="g2278"
+           transform="translate(21.49999,21.39187)">
+          <path
+             transform="matrix(0.783784,0,0,0.783784,-65.93249,-46.65142)"
+             d="M 312 103.36219 A 18 18 0 1 1  276,103.36219 A 18 18 0 1 1  312 103.36219 z"
+             sodipodi:ry="18"
+             sodipodi:rx="18"
+             sodipodi:cy="103.36219"
+             sodipodi:cx="294"
+             id="path2265"
+             style="fill:url(#linearGradient2359);fill-opacity:1;stroke:#000000;stroke-width:1.27586174;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+             sodipodi:type="arc" />
+          <text
+             sodipodi:linespacing="125%"
+             id="text2269"
+             y="37.784069"
+             x="154.88379"
+             style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+             xml:space="preserve"><tspan
+               y="37.784069"
+               x="154.88379"
+               id="tspan2271"
+               sodipodi:role="line">ESC</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g
+       style="display:inline"
+       inkscape:label="trace"
+       id="layer2"
+       transform="matrix(1.694246,0,0,1.694246,399.3753,753.7537)">
+      <g
+         transform="translate(-69.99486,-212.7874)"
+         id="g7497">
+        <path
+           style="fill:#5fa46e;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="M 251.8952,264.1083 C 240.96299,258.06601 225.23027,263.63858 217.21542,273.4345 C 209.20057,283.23043 212.79601,296.54153 223.43135,303.09225 C 231.66609,308.16435 243.53785,305.91585 249.95468,304.90902 C 262.45864,302.94708 264.32474,270.97817 251.8952,264.1083 z "
+           id="path1351"
+           sodipodi:nodetypes="cssss"
+           inkscape:export-filename="/home/evan/zombies.png"
+           inkscape:export-xdpi="90"
+           inkscape:export-ydpi="90" />
+        <path
+           style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:bevel;stroke-opacity:1"
+           d="M 237.58015,284.15769 C 237.08821,281.65226 236.79381,277.89198 237.30533,273.32953 C 228.09092,276.83897 227.32438,283.94123 228.31649,287.51192 C 231.83361,286.58965 235.63096,285.49541 239.87667,285.71415 C 239.1388,285.30029 237.60049,285.18657 237.58015,284.15769 z "
+           id="path1355"
+           sodipodi:nodetypes="ccccc"
+           inkscape:export-filename="/home/evan/zombies.png"
+           inkscape:export-xdpi="90"
+           inkscape:export-ydpi="90" />
+        <path
+           style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:bevel;stroke-opacity:1"
+           d="M 251.95655,279.95035 C 251.95655,279.95035 249.80204,280.72668 248.46523,282.52728 C 247.44693,283.89887 246.98973,285.49905 248.0496,286.76673 C 249.10946,288.03441 250.48106,288.13832 252.28906,287.09923 C 254.09706,286.06015 254.45034,283.02603 254.45034,283.02603 L 252.1228,283.35854 L 251.95655,279.95035 z "
+           id="path2230"
+           sodipodi:nodetypes="csssccc"
+           inkscape:export-filename="/home/evan/zombies.png"
+           inkscape:export-xdpi="90"
+           inkscape:export-ydpi="90" />
+        <path
+           style="fill:#020202;fill-opacity:0.93442622;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="M 224.2015,302.15933 C 222.74188,295.25224 228.62932,289.52811 239.46465,289.71795 C 248.01255,289.86771 255.26112,296.00809 254.59953,301.51803 C 254.10639,305.62509 244.62718,305.84686 239.27225,305.81479 C 231.67119,305.76928 224.85394,305.24674 224.2015,302.15933 z "
+           id="path3978"
+           sodipodi:nodetypes="cssss"
+           inkscape:export-filename="/home/evan/zombies.png"
+           inkscape:export-xdpi="90"
+           inkscape:export-ydpi="90" />
+        <path
+           style="fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="M 229.07545,305.6224 C 210.66283,331.85907 208.97624,363.37727 207.95404,394.29597"
+           id="path3980"
+           sodipodi:nodetypes="cc"
+           inkscape:export-filename="/home/evan/zombies.png"
+           inkscape:export-xdpi="90"
+           inkscape:export-ydpi="90" />
+        <path
+           style="fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="M 221.08221,318.78771 C 206.7969,315.69 189.25683,320.51921 174.29672,325.51909"
+           id="path3982"
+           sodipodi:nodetypes="cc"
+           inkscape:export-filename="/home/evan/zombies.png"
+           inkscape:export-xdpi="90"
+           inkscape:export-ydpi="90" />
+        <path
+           style="fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1"
+           d="M 221.69404,318.98646 C 232.16276,332.2929 239.33881,352.96152 255.24084,355.64448 C 264.12874,357.14403 277.70703,355.36026 282.90671,354.03399 C 292.41947,351.6076 281.89276,341.28768 288.64128,341.80747"
+           id="path3984"
+           sodipodi:nodetypes="cssc"
+           inkscape:export-filename="/home/evan/zombies.png"
+           inkscape:export-xdpi="90"
+           inkscape:export-ydpi="90" />
+        <path
+           style="fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="M 209.76583,365.97258 C 213.84603,393.50447 217.27587,423.22806 218.95691,453.15911"
+           id="path4863"
+           sodipodi:nodetypes="cc"
+           inkscape:export-filename="/home/evan/zombies.png"
+           inkscape:export-xdpi="90"
+           inkscape:export-ydpi="90" />
+        <path
+           style="fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="M 206.84639,419.18773 L 207.24317,460.36757"
+           id="path4865"
+           sodipodi:nodetypes="cc"
+           inkscape:export-filename="/home/evan/zombies.png"
+           inkscape:export-xdpi="90"
+           inkscape:export-ydpi="90" />
+        <path
+           style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="M 218.86968,452.24112 C 223.88324,448.03053 236.06391,446.76578 237.42858,447.30224 C 239.1055,447.96145 243.42328,453.01717 244.41178,457.21387 C 236.25799,457.03303 227.75647,457.19946 218.95691,457.6644 L 218.86968,452.24112 z "
+           id="path4867"
+           sodipodi:nodetypes="csccc"
+           inkscape:export-filename="/home/evan/zombies.png"
+           inkscape:export-xdpi="90"
+           inkscape:export-ydpi="90" />
+        <path
+           style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="M 207.32078,459.46351 C 209.48319,457.48814 212.53043,453.47056 223.42689,455.58836 C 227.88917,457.62044 231.26077,460.47054 234.44686,463.45977 C 224.86352,467.05901 214.03049,464.79443 207.32078,463.70196 L 207.32078,459.46351 z "
+           id="path4869"
+           sodipodi:nodetypes="ccccc"
+           inkscape:export-filename="/home/evan/zombies.png"
+           inkscape:export-xdpi="90"
+           inkscape:export-ydpi="90" />
+        <path
+           style="fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="M 215.10163,343.69136 C 212.39501,346.60383 208.54474,348.18204 204.48356,349.51418"
+           id="path5746"
+           sodipodi:nodetypes="cc"
+           inkscape:export-filename="/home/evan/zombies.png"
+           inkscape:export-xdpi="90"
+           inkscape:export-ydpi="90" />
+        <path
+           style="fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="M 223.06519,354.65195 C 215.44209,355.81973 208.71311,351.1224 204.48355,349.68543"
+           id="path5748"
+           sodipodi:nodetypes="cc"
+           inkscape:export-filename="/home/evan/zombies.png"
+           inkscape:export-xdpi="90"
+           inkscape:export-ydpi="90" />
+        <path
+           style="fill:#bdd77c;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="M 212.37189,415.98318 C 202.03867,350.2519 181.99721,338.61933 165.36165,314.20338 C 179.30236,340.30979 193.57728,368.88487 192.8208,422.18108 C 200.50365,421.28495 208.1865,419.04764 215.86935,415.15408 L 212.37189,415.98318 z "
+           id="path5750"
+           sodipodi:nodetypes="ccccc"
+           inkscape:export-filename="/home/evan/zombies.png"
+           inkscape:export-xdpi="90"
+           inkscape:export-ydpi="90" />
+        <path
+           style="fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="M 131.03163,287.65882 C 109.95331,290.99864 108.98786,320.84294 118.49347,346.73118 C 129.49915,376.70481 123.46611,391.11202 120.90219,401.95393 C 119.37025,408.43197 106.56428,402.1893 111.03959,394.75624"
+           id="path5754"
+           sodipodi:nodetypes="cssc"
+           inkscape:export-filename="/home/evan/zombies.png"
+           inkscape:export-xdpi="90"
+           inkscape:export-ydpi="90" />
+        <path
+           style="fill:#785a6d;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="M 134.43097,288.06547 C 136.6228,293.78131 139.2879,293.11344 141.81136,290.20707 C 143.51761,293.33157 145.91073,293.02169 148.61053,291.17839 C 150.40879,294.76088 153.94458,295.38408 155.73151,294.27753 C 154.07391,297.02499 152.54807,300.25559 149.11617,296.49729 C 144.107,304.48898 142.90554,298.51909 140.40126,297.32618 C 133.10197,302.09688 134.43228,294.09577 134.43097,288.06547 z "
+           id="path5756"
+           sodipodi:nodetypes="ccccccc"
+           inkscape:export-filename="/home/evan/zombies.png"
+           inkscape:export-xdpi="90"
+           inkscape:export-ydpi="90" />
+        <path
+           style="fill:#aed7b5;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="M 156.37263,293.1199 C 159.90817,296.05639 163.64627,300.32619 164.1374,303.33464 C 164.62853,306.3431 166.66899,312.47151 163.91826,318.89373 C 156.49535,320.29402 152.87402,324.91102 149.89316,330.06997 C 129.56561,335.04545 116.12643,326.39191 114.39215,308.59405 C 113.03179,294.63353 122.43992,289.02923 134.33408,286.67985 C 133.96605,291.90089 132.97269,302.40228 140.47006,297.19867 C 142.43093,300.21146 145.25292,303.39289 149.0166,296.54124 C 152.14274,299.73191 154.62383,297.16025 156.37263,293.1199 z "
+           id="path5752"
+           sodipodi:nodetypes="czccscccc"
+           inkscape:export-filename="/home/evan/zombies.png"
+           inkscape:export-xdpi="90"
+           inkscape:export-ydpi="90" />
+        <path
+           style="fill:#ad67a6;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="M 153.69083,324.92219 C 159.83887,340.65395 167.84048,329.20688 160.1292,319.93843"
+           id="path5758"
+           sodipodi:nodetypes="cc"
+           inkscape:export-filename="/home/evan/zombies.png"
+           inkscape:export-xdpi="90"
+           inkscape:export-ydpi="90" />
+        <path
+           style="fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1"
+           d="M 156.78245,322.51286 C 157.02248,323.74864 158.24213,325.78751 158.84199,326.11705"
+           id="path5760"
+           sodipodi:nodetypes="cc"
+           inkscape:export-filename="/home/evan/zombies.png"
+           inkscape:export-xdpi="90"
+           inkscape:export-ydpi="90" />
+        <path
+           style="fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1"
+           d="M 141.92352,317.92738 C 147.20056,322.796 149.84439,321.48559 153.10307,321.30831"
+           id="path5762"
+           sodipodi:nodetypes="cc"
+           inkscape:export-filename="/home/evan/zombies.png"
+           inkscape:export-xdpi="90"
+           inkscape:export-ydpi="90" />
+        <path
+           style="fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1"
+           d="M 146.29543,315.96019 C 147.42339,319.30694 147.83733,321.80864 147.88856,325.15539"
+           id="path5764"
+           sodipodi:nodetypes="cc"
+           inkscape:export-filename="/home/evan/zombies.png"
+           inkscape:export-xdpi="90"
+           inkscape:export-ydpi="90" />
+        <path
+           style="fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1"
+           d="M 134.12751,322.25541 C 133.58543,325.4057 134.15733,328.57288 135.41473,331.00846"
+           id="path5766"
+           sodipodi:nodetypes="cc"
+           inkscape:export-filename="/home/evan/zombies.png"
+           inkscape:export-xdpi="90"
+           inkscape:export-ydpi="90" />
+        <path
+           style="fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1"
+           d="M 130.00843,324.05751 C 132.87847,326.72658 135.97322,327.56719 139.89084,327.06415"
+           id="path5768"
+           sodipodi:nodetypes="cc"
+           inkscape:export-filename="/home/evan/zombies.png"
+           inkscape:export-xdpi="90"
+           inkscape:export-ydpi="90" />
+        <path
+           style="fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="M 174.4555,332.12396 C 174.4555,332.12396 175.74849,351.93902 171.76712,367.39417 C 168.47156,380.18707 166.51596,397.05415 166.51596,397.05415"
+           id="path6643"
+           sodipodi:nodetypes="csc"
+           inkscape:export-filename="/home/evan/zombies.png"
+           inkscape:export-xdpi="90"
+           inkscape:export-ydpi="90" />
+        <path
+           style="fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="M 174.87157,333.68968 C 176.30471,356.32011 178.34173,378.86111 177.52528,400.92914"
+           id="path6645"
+           sodipodi:nodetypes="cc"
+           inkscape:export-filename="/home/evan/zombies.png"
+           inkscape:export-xdpi="90"
+           inkscape:export-ydpi="90" />
+        <path
+           style="fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1"
+           d="M 166.66158,396.1465 C 166.2592,399.64136 158.46292,411.38595 165.79167,407.6651"
+           id="path6647"
+           sodipodi:nodetypes="cc"
+           inkscape:export-filename="/home/evan/zombies.png"
+           inkscape:export-xdpi="90"
+           inkscape:export-ydpi="90" />
+        <path
+           style="fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1"
+           d="M 166.82347,396.6901 C 166.82347,396.6901 166.55307,414.5627 171.71387,406.14256"
+           id="path6649"
+           sodipodi:nodetypes="cc"
+           inkscape:export-filename="/home/evan/zombies.png"
+           inkscape:export-xdpi="90"
+           inkscape:export-ydpi="90" />
+        <path
+           style="fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1"
+           d="M 166.98613,396.36606 C 168.8693,398.53895 170.13837,401.49228 172.85319,402.6672"
+           id="path6651"
+           sodipodi:nodetypes="cc"
+           inkscape:export-filename="/home/evan/zombies.png"
+           inkscape:export-xdpi="90"
+           inkscape:export-ydpi="90" />
+        <path
+           style="fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1"
+           d="M 179.2636,409.40342 C 179.2636,409.40342 172.20157,412.60836 177.52605,398.97303"
+           id="path6653"
+           sodipodi:nodetypes="cc"
+           inkscape:export-filename="/home/evan/zombies.png"
+           inkscape:export-xdpi="90"
+           inkscape:export-ydpi="90" />
+        <path
+           style="fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1"
+           d="M 184.26125,402.88474 C 185.18609,413.48135 179.58383,404.89706 177.41753,400.38604"
+           id="path6655"
+           sodipodi:nodetypes="cc"
+           inkscape:export-filename="/home/evan/zombies.png"
+           inkscape:export-xdpi="90"
+           inkscape:export-ydpi="90" />
+        <path
+           style="fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1"
+           d="M 178.01349,394.46485 C 180.88899,396.5784 183.91746,398.0142 185.34769,398.10438"
+           id="path6657"
+           sodipodi:nodetypes="cc"
+           inkscape:export-filename="/home/evan/zombies.png"
+           inkscape:export-xdpi="90"
+           inkscape:export-ydpi="90" />
+        <path
+           style="fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="M 196.39811,422.07599 L 196.77482,451.98761"
+           id="path7532"
+           sodipodi:nodetypes="cc"
+           inkscape:export-filename="/home/evan/zombies.png"
+           inkscape:export-xdpi="90"
+           inkscape:export-ydpi="90" />
+        <path
+           style="fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="M 202.4154,420.47833 L 203.60608,454.10327"
+           id="path7534"
+           sodipodi:nodetypes="cc"
+           inkscape:export-filename="/home/evan/zombies.png"
+           inkscape:export-xdpi="90"
+           inkscape:export-ydpi="90" />
+        <path
+           style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="M 196.8589,451.46626 C 197.16204,458.60457 197.06241,465.23547 198.04958,472.70003 C 198.04958,472.70003 190.65248,473.7405 189.31794,463.76994 C 188.73982,459.45075 195.60734,451.58004 196.8589,451.46626 z "
+           id="path7536"
+           sodipodi:nodetypes="ccsc"
+           inkscape:export-filename="/home/evan/zombies.png"
+           inkscape:export-xdpi="90"
+           inkscape:export-ydpi="90" />
+        <path
+           style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="M 203.40764,451.06937 C 203.40764,451.06937 209.05718,464.96669 207.97191,468.53266 C 206.91021,472.02121 202.8123,475.67673 202.8123,475.67673 C 195.80459,468.00288 201.0136,458.48472 203.40764,451.06937 z "
+           id="path7538"
+           sodipodi:nodetypes="cscc"
+           inkscape:export-filename="/home/evan/zombies.png"
+           inkscape:export-xdpi="90"
+           inkscape:export-ydpi="90" />
+        <path
+           style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="M 128.01654,245.47531 C 126.05976,245.38834 123.84209,246.38847 122.97241,247.91041 C 122.10274,249.43235 123.63343,250.89772 125.58144,250.69338 C 127.39939,250.50269 127.70608,250.02897 128.88622,249.12796 C 130.27947,248.06424 129.97331,245.56228 128.01654,245.47531 z "
+           id="path1353"
+           sodipodi:nodetypes="cssss"
+           inkscape:export-filename="/home/evan/zombies.png"
+           inkscape:export-xdpi="90"
+           inkscape:export-ydpi="90" />
+        <path
+           style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="M 137.75693,261.12951 C 136.4959,260.69467 135.49577,260.91209 134.97396,261.65132 C 134.45215,262.39054 134.40867,263.65157 135.6697,264.08641 C 136.93073,264.52125 139.49628,264.1299 140.01809,263.39067 C 140.5399,262.65144 139.01796,261.56435 137.75693,261.12951 z "
+           id="path1356"
+           sodipodi:nodetypes="cssss"
+           inkscape:export-filename="/home/evan/zombies.png"
+           inkscape:export-xdpi="90"
+           inkscape:export-ydpi="90" />
+        <path
+           style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="M 107.31821,263.91248 C 105.27447,264.3908 102.92634,265.91273 102.62196,267.91299 C 102.31758,269.91325 104.95778,271.46593 106.97035,270.8699 C 108.58546,270.39157 108.81926,269.04357 110.44906,267.04331 C 111.72709,265.47477 109.36195,263.43416 107.31821,263.91248 z "
+           id="path1358"
+           sodipodi:nodetypes="cssss"
+           inkscape:export-filename="/home/evan/zombies.png"
+           inkscape:export-xdpi="90"
+           inkscape:export-ydpi="90" />
+        <path
+           style="fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="M 124.19131,246.52161 C 124.19131,246.52161 117.09525,239.67179 122.27667,239.21363 C 126.29763,238.85405 126.62506,245.47531 126.62506,245.47531"
+           id="path2233"
+           sodipodi:nodetypes="csc"
+           inkscape:export-filename="/home/evan/zombies.png"
+           inkscape:export-xdpi="90"
+           inkscape:export-ydpi="90" />
+        <path
+           style="fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="M 126.24187,250.7351 C 126.30006,251.31713 127.41224,257.26589 130.49067,254.9257 C 132.52445,253.37965 129.2102,249.10542 129.2102,249.10542"
+           id="path2235"
+           sodipodi:nodetypes="csc"
+           inkscape:export-filename="/home/evan/zombies.png"
+           inkscape:export-xdpi="90"
+           inkscape:export-ydpi="90" />
+        <path
+           style="fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="M 104.97205,264.67719 C 105.95161,263.3058 101.22422,258.17289 98.921028,261.43243 C 96.655,264.63937 102.47156,267.24287 104.27048,266.34341"
+           id="path2237"
+           sodipodi:nodetypes="csc"
+           inkscape:export-filename="/home/evan/zombies.png"
+           inkscape:export-xdpi="90"
+           inkscape:export-ydpi="90" />
+        <path
+           style="fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="M 108.65527,269.41277 C 108.74,270.76833 110.72416,273.61859 112.6893,271.25439 C 114.82625,268.68347 110.1331,267.15813 109.53224,267.65885"
+           id="path2241"
+           sodipodi:nodetypes="csc"
+           inkscape:export-filename="/home/evan/zombies.png"
+           inkscape:export-xdpi="90"
+           inkscape:export-ydpi="90" />
+        <path
+           style="fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="M 137.50725,261.43244 C 136.58601,261.43244 135.22388,255.04733 137.77034,255.11833 C 141.35105,255.21818 140.22633,261.60776 138.99808,261.78322"
+           id="path2243"
+           sodipodi:nodetypes="csc"
+           inkscape:export-filename="/home/evan/zombies.png"
+           inkscape:export-xdpi="90"
+           inkscape:export-ydpi="90" />
+        <path
+           style="fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="M 136.98107,264.5018 C 135.29951,265.436 134.98128,269.24539 137.33185,269.67586 C 140.2531,270.21084 139.93061,265.00656 138.91038,264.3264"
+           id="path2245"
+           sodipodi:nodetypes="csc"
+           inkscape:export-filename="/home/evan/zombies.png"
+           inkscape:export-xdpi="90"
+           inkscape:export-ydpi="90" />
+        <path
+           style="fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1"
+           d="M 123.47589,213.28736 C 117.66112,215.34765 110.28182,216.26438 117.51257,224.86323 C 115.89639,237.00689 122.17104,232.69964 129.26383,233.28204 C 131.55854,232.18095 133.90402,230.37216 136.98107,232.75586 C 142.73718,235.89486 137.85807,240.83559 133.82401,243.98094"
+           id="path2247"
+           sodipodi:nodetypes="ccccc"
+           inkscape:export-filename="/home/evan/zombies.png"
+           inkscape:export-xdpi="90"
+           inkscape:export-ydpi="90" />
+        <path
+           style="fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1"
+           d="M 96.991717,274.67453 C 94.615275,276.79569 91.007663,277.93192 86.292812,278.18236 C 84.071238,279.96564 81.258958,280.41983 77.172433,278.00697"
+           id="path3122"
+           sodipodi:nodetypes="ccc"
+           inkscape:export-filename="/home/evan/zombies.png"
+           inkscape:export-xdpi="90"
+           inkscape:export-ydpi="90" />
+        <path
+           style="fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1"
+           d="M 73.489203,280.28707 C 70.806691,281.21844 70.411759,284.05613 70.507541,287.30274"
+           id="path3124"
+           sodipodi:nodetypes="cc"
+           inkscape:export-filename="/home/evan/zombies.png"
+           inkscape:export-xdpi="90"
+           inkscape:export-ydpi="90" />
+        <path
+           style="fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1"
+           d="M 145.57527,261.87092 C 153.6433,261.13546 154.69565,264.24121 159.25584,262.2217 C 165.56004,262.58338 161.94287,271.17508 164.69299,274.49913"
+           id="path3128"
+           sodipodi:nodetypes="ccc"
+           inkscape:export-filename="/home/evan/zombies.png"
+           inkscape:export-xdpi="90"
+           inkscape:export-ydpi="90" />
+        <path
+           style="fill:#d1d1d1;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="M 225.19358,295.77603 L 228.71666,298.98985 L 230.59139,292.29439 L 234.87648,294.43694 L 237.01903,292.29439 L 241.57193,290.9553 L 244.78575,294.97257 L 247.73175,292.29439 L 249.87429,296.8473 L 253.08811,296.31167 C 246.03508,286.64698 229.31235,289.19369 225.19358,295.77603 z "
+           id="path8413"
+           sodipodi:nodetypes="ccccccccccc"
+           inkscape:export-filename="/home/evan/zombies.png"
+           inkscape:export-xdpi="90"
+           inkscape:export-ydpi="90" />
+        <path
+           style="fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="M 172.08082,326.41533 C 164.99176,331.89004 167.41464,340.64439 172.27301,341.22558 C 172.89476,341.29996 196.75744,348.18427 209.27882,350.54173 C 214.64494,350.63399 220.01107,349.5314 225.37719,346.43151"
+           id="path5744"
+           sodipodi:nodetypes="cscc"
+           inkscape:export-filename="/home/evan/zombies.png"
+           inkscape:export-xdpi="90"
+           inkscape:export-ydpi="90" />
+        <path
+           style="fill:#d6d6d6;fill-opacity:1;fill-rule:evenodd;stroke:#c1c1c1;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:round;stroke-opacity:1"
+           d="M 271.67251,343.7427 L 306.32548,343.7427 L 306.32548,346.09776 L 305.23206,346.09776 C 304.84276,346.32632 303.5288,346.1636 303.29755,347.94816 L 295.4754,348.11638 C 295.4754,348.11638 293.94041,346.85474 292.44747,346.85474 C 290.95453,346.85474 289.50365,348.11638 289.50365,348.11638 L 275.2051,348.20049 C 275.00468,347.41755 274.69261,346.69044 273.60702,346.35009 L 271.75662,346.26598 L 271.67251,343.7427 z "
+           id="path5749"
+           sodipodi:nodetypes="ccccccsccccc"
+           inkscape:export-filename="/home/evan/zombies.png"
+           inkscape:export-xdpi="90"
+           inkscape:export-ydpi="90" />
+        <path
+           style="fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1"
+           d="M 286.43191,352.11951 C 290.36405,349.14344 288.85154,337.73561 284.46253,341.98269"
+           id="path3986"
+           sodipodi:nodetypes="cc"
+           inkscape:export-filename="/home/evan/zombies.png"
+           inkscape:export-xdpi="90"
+           inkscape:export-ydpi="90" />
+        <path
+           style="fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1"
+           d="M 289.51618,341.10573 C 292.40453,338.57352 292.8892,349.83734 284.93772,353.19235"
+           id="path3988"
+           sodipodi:nodetypes="cc"
+           inkscape:export-filename="/home/evan/zombies.png"
+           inkscape:export-xdpi="90"
+           inkscape:export-ydpi="90" />
+      </g>
+    </g>
+  </g>
+</svg>

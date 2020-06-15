@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="1.5.0" class="java.beans.XMLDecoder">
+	<object class="org.jdesktop.lg3d.apps.smrt.menu.RingMenu"/>
+	<object class="org.jdesktop.lg3d.apps.smrt.menu.IconItem">
+		<void property="iconFilename"><string>data/images/video.png</string></void>
+		<void property="iconAspect"><float>1.0</float></void>
+		<void property="label"><string>Watch a Movie</string></void>
+		<void property="action"><string>push</string></void>
+		<void property="actionArgument"><string>movies</string></void>
+	</object>
+	<object class="org.jdesktop.lg3d.apps.smrt.menu.IconItem">
+		<void property="iconFilename"><string>data/images/video.png</string></void>
+		<void property="iconAspect"><float>1.0</float></void>
+		<void property="label"><string>Watch a TV Series</string></void>
+		<void property="action"><string>push</string></void>
+		<void property="actionArgument"><string>series</string></void>
+	</object>
+	<object class="org.jdesktop.lg3d.apps.smrt.menu.IconItem">
+		<void property="iconFilename"><string>data/images/tv.png</string></void>
+		<void property="iconAspect"><float>1.0</float></void>
+		<void property="label"><string>Watch Live TV</string></void>
+		<void property="action"><string>push</string></void>
+		<void property="actionArgument"><string>tv</string></void>
+	</object>
+	<object class="org.jdesktop.lg3d.apps.smrt.menu.IconItem">
+		<void property="iconFilename"><string>data/images/speaker.png</string></void>
+		<void property="iconAspect"><float>1.0</float></void>
+		<void property="label"><string>Listen to music</string></void>
+		<void property="action"><string>push</string></void>
+		<void property="actionArgument"><string>music</string></void>
+	</object>
+
+	<!-- these are just there to be pretty for now...
+	<object class="org.jdesktop.lg3d.apps.smrt.menu.IconItem">
+		<void property="iconFilename"><string>data/images/gamecube.png</string></void>
+		<void property="iconAspect"><float>1.0</float></void>
+		<void property="label"><string>Nintendo Gamecube</string></void>
+	</object>
+	<object class="org.jdesktop.lg3d.apps.smrt.menu.IconItem">
+		<void property="iconFilename"><string>data/images/n64.png</string></void>
+		<void property="iconAspect"><float>1.0</float></void>
+		<void property="label"><string>Nintendo 64</string></void>
+	</object>
+	<object class="org.jdesktop.lg3d.apps.smrt.menu.IconItem">
+		<void property="iconFilename"><string>data/images/playstation.png</string></void>
+		<void property="iconAspect"><float>1.0</float></void>
+		<void property="label"><string>Playstation</string></void>
+	</object>
+	-->
+</java>
